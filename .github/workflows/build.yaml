@@ -1,0 +1,22 @@
+name: build
+on:
+  push:
+  workflow_call:
+
+permissions:
+  contents: write
+
+jobs:
+  build-handout:
+    uses: ./.github/workflows/template_build_latex.yaml
+    with:
+      tex-workdir: handout
+      tex-file: handout
+      output-name: 25_sez_solid_handout
+
+  build-presentation:
+    uses: ./.github/workflows/template_build_latex.yaml
+    with:
+      tex-workdir: presentation
+      tex-file: presentation
+      output-name: 25_sez_solid_presentation
