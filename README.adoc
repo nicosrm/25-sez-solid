@@ -1,0 +1,28 @@
+= Data Spaces am Beispiel von Solid
+
+== Abstrakt
+
+TBA
+
+== Kontext
+
+[cols=2,1]
+|===
+| Titel
+| Data Spaces am Beispiel von Solid
+
+| Autor
+| Nico Schramm
+
+// | Beleg
+// | PDF-Version, link:src/handout.tex[LaTeX-Datei]
+
+// | Präsentation
+// | PDF-Version
+
+| Kontext
+| Modul “Innovative Methoden für Software Engineering der Zukunft” (Prof. Dr. Andreas Both, Sommersemester 2025) an der HTWK Leipzig
+
+| Lizenz
+| link:LICENSE[CC BY 4.0]
+|===
