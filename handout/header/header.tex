@@ -1,24 +1,25 @@
 % !TeX root = ../handout.tex
 
-\documentclass[acmtog]{acmart}
+\documentclass[
+    a4paper,
+    12pt,
+]{article}
 
 \input{header/packages.tex}
 
-\AtBeginDocument{%
-  \providecommand\BibTeX{{%
-    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
-    
-\copyrightyear{2025}
-\acmYear{2025}
-\citestyle{acmauthoryear}
-
 \usepackage[figurename=Fig.]{caption}
-\setcopyright{none}
 \makeatletter
 \renewcommand{\fnum@figure}{Abb. \thefigure}
 \makeatother
 \addto\captionsngerman{\renewcommand{\figurename}{Abb.}}
-\settopmatter{printacmref=false} % Removes citation information below abstract
-\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
 
 \input{header/metadata.tex}
+
+\makeatletter
+\hypersetup{
+    pdfauthor={\@author},
+    pdftitle={\@title},
+    pdfsubject={\subject},
+    citecolor=blue
+}
+\makeatother

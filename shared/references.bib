@@ -1,284 +1,85 @@
-% Journals
-
-% First the Full Name is given, then the abbreviation used in the AMS Math
-% Reviews, with an indication if it could not be found there.
-% Note the 2nd overwrites the 1st, so swap them if you want the full name.
-
- %{AMS}
- @String{AMSTrans = "American Mathematical Society Translations" }
- @String{AMSTrans = "Amer. Math. Soc. Transl." }
- @String{BullAMS = "Bulletin of the American Mathematical Society" }
- @String{BullAMS = "Bull. Amer. Math. Soc." }
- @String{ProcAMS = "Proceedings of the American Mathematical Society" }
- @String{ProcAMS = "Proc. Amer. Math. Soc." }
- @String{TransAMS = "Transactions of the American Mathematical Society" }
- @String{TransAMS = "Trans. Amer. Math. Soc." }
-
- %ACM
- @String{CACM = "Communications of the {ACM}" }
- @String{CACM = "Commun. {ACM}" }
- @String{CompServ = "Comput. Surveys" }
- @String{JACM = "J. ACM" }
- @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
- @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
- @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
- @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
-
- @String{AmerSocio = "American Journal of Sociology" }
- @String{AmerStatAssoc = "Journal of the American Statistical Association" }
- @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
- @String{ApplMathComp = "Applied Mathematics and Computation" }
- @String{ApplMathComp = "Appl. Math. Comput." }
- @String{AmerMathMonthly = "American Mathematical Monthly" }
- @String{AmerMathMonthly = "Amer. Math. Monthly" }
- @String{BIT = "{BIT}" }
- @String{BritStatPsych = "British Journal of Mathematical and Statistical
-          Psychology" }
- @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
- @String{CanMathBull = "Canadian Mathematical Bulletin" }
- @String{CanMathBull = "Canad. Math. Bull." }
- @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
- @String{CompApplMath = "J. Comput. Appl. Math." }
- @String{CompPhys = "Journal of Computational Physics" }
- @String{CompPhys = "J. Comput. Phys." }
- @String{CompStruct = "Computers and Structures" }
- @String{CompStruct = "Comput. \& Structures" }
- @String{CompJour = "The Computer Journal" }
- @String{CompJour = "Comput. J." }
- @String{CompSysSci = "Journal of Computer and System Sciences" }
- @String{CompSysSci = "J. Comput. System Sci." }
- @String{Computing = "Computing" }
- @String{ContempMath = "Contemporary Mathematics" }
- @String{ContempMath = "Contemp. Math." }
- @String{Crelle = "Crelle's Journal" }
- @String{GiornaleMath = "Giornale di Mathematiche" }
- @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
-
- %IEEE
- @String{Computer = "{IEEE} Computer" }
- @String{IEEETransComp = "{IEEE} Transactions on Computers" }
- @String{IEEETransComp = "{IEEE} Trans. Comput." }
- @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
- @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
- @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
- @String{ProcIEEE = "Proceedings of the {IEEE}" }
- @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
- @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
-     Systems" }
- @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
-
- @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
- @String{IMANumerAna = "{IMA} J. Numer. Anal." }
- @String{InfProcLet = "Information Processing Letters" }
- @String{InfProcLet = "Inform. Process. Lett." }
- @String{InstMathApp = "Journal of the Institute of Mathematics and
-     its Applications" }
- @String{InstMathApp = "J. Inst. Math. Appl." }
- @String{IntControl = "International Journal of Control" }
- @String{IntControl = "Internat. J. Control" }
- @String{IntNumerEng = "International Journal for Numerical Methods in
-     Engineering" }
- @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
- @String{IntSuper = "International Journal of Supercomputing Applications" }
- @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
-%% in AMS MR
- @String{Kibernetika = "Kibernetika" }
- @String{JResNatBurStand = "Journal of Research of the National Bureau
-     of Standards" }
- @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
- @String{LinAlgApp = "Linear Algebra and its Applications" }
- @String{LinAlgApp = "Linear Algebra Appl." }
- @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
- @String{MathAnaAppl = "J. Math. Anal. Appl." }
- @String{MathAnnalen = "Mathematische Annalen" }
- @String{MathAnnalen = "Math. Ann." }
- @String{MathPhys = "Journal of Mathematical Physics" }
- @String{MathPhys = "J. Math. Phys." }
- @String{MathComp = "Mathematics of Computation" }
- @String{MathComp = "Math. Comp." }
- @String{MathScand = "Mathematica Scandinavica" }
- @String{MathScand = "Math. Scand." }
- @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
- @String{TablesAidsComp = "Math. Tables Aids Comput." }
- @String{NumerMath = "Numerische Mathematik" }
- @String{NumerMath = "Numer. Math." }
- @String{PacificMath = "Pacific Journal of Mathematics" }
- @String{PacificMath = "Pacific J. Math." }
- @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
- @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
-%% in AMS MR
- @String{ParComputing = "Parallel Computing" }
- @String{ParComputing = "Parallel Comput." }
- @String{PhilMag = "Philosophical Magazine" }
- @String{PhilMag = "Philos. Mag." }
- @String{ProcNAS = "Proceedings of the National Academy of Sciences
-                    of the USA" }
- @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
- @String{Psychometrika = "Psychometrika" }
- @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
- @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
- @String{QuartApplMath = "Quarterly of Applied Mathematics" }
- @String{QuartApplMath = "Quart. Appl. Math." }
- @String{RevueInstStat = "Review of the International Statisical Institute" }
- @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
-
- %SIAM
- @String{JSIAM = "Journal of the Society for Industrial and Applied
-     Mathematics" }
- @String{JSIAM = "J. Soc. Indust. Appl. Math." }
- @String{JSIAMB = "Journal of the Society for Industrial and Applied
-     Mathematics, Series B, Numerical Analysis" }
- @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
- @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
- @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
- @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
- @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
- @String{SIAMComp = "{SIAM} Journal on Computing" }
- @String{SIAMComp = "{SIAM} J. Comput." }
- @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
- @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
- @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
- @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
- @String{SIAMReview = "{SIAM} Review" }
- @String{SIAMReview = "{SIAM} Rev." }
- @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
-     Computing" }
- @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
-
- @String{SoftPracExp = "Software Practice and Experience" }
- @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
- @String{StatScience = "Statistical Science" }
- @String{StatScience = "Statist. Sci." }
- @String{Techno = "Technometrics" }
- @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
-     Physics" }
- @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
- @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
- @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
- @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
-     Mechanik" }
- @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
- @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
- @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
-
-% Publishers % ================================================= |
-
-@String{Academic = "Academic Press" }
-@String{ACMPress = "{ACM} Press" }
-@String{AdamHilger = "Adam Hilger" }
-@String{AddisonWesley = "Addison-Wesley" }
-@String{AllynBacon = "Allyn and Bacon" }
-@String{AMS = "American Mathematical Society" }
-@String{Birkhauser = "Birkha{\"u}ser" }
-@String{CambridgePress = "Cambridge University Press" }
-@String{Chelsea = "Chelsea" }
-@String{ClaredonPress = "Claredon Press" }
-@String{DoverPub = "Dover Publications" }
-@String{Eyolles = "Eyolles" }
-@String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
-@String{Interscience = "Interscience" }
-@String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
-@String{JohnWileySons = "John Wiley and Sons" }
-@String{Macmillan = "Macmillan" }
-@String{MathWorks = "The Math Works Inc." }
-@String{McGrawHill = "McGraw-Hill" }
-@String{NatBurStd = "National Bureau of Standards" }
-@String{NorthHolland = "North-Holland" }
-@String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
-@String{PergamonPress = "Pergamon Press" }
-@String{PlenumPress = "Plenum Press" }
-@String{PrenticeHall = "Prentice-Hall" }
-@String{SIAMPub = "{SIAM} Publications" }
-@String{Springer = "Springer-Verlag" }
-@String{TexasPress = "University of Texas Press" }
-@String{VanNostrand = "Van Nostrand" }
-@String{WHFreeman = "W. H. Freeman and Co." }
-
-% Entries
 @inproceedings{bizerLinkedDataStory2009,
-  title      = {Linked {{Data}} - {{The Story So Far}}},
+  title = {Linked {{Data}} - {{The Story So Far}}},
   shorttitle = {Linked {{Data}} - {{The Story So Far}}},
-  booktitle  = {International {{Journal}} on {{Semantic Web}} and {{Information Systems}}},
-  author     = {Bizer, Christian and Heath, Tom and {Berners-Lee}, Tim},
-  year       = {2009},
-  month      = jul,
-  volume     = {5},
-  pages      = {1--22},
-  issn       = {1552-6283, 1552-6291},
-  doi        = {10.4018/jswis.2009081901},
-  url        = {https://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/jswis.2009081901},
-  urldate    = {2025-06-08},
-  langid     = {english}
+  booktitle = {International {{Journal}} on {{Semantic Web}} and {{Information Systems}}},
+  author = {Bizer, Christian and Heath, Tom and Berners-Lee, Tim},
+  date = {2009-07-01},
+  volume = {5},
+  number = {3},
+  pages = {1--22},
+  issn = {1552-6283, 1552-6291},
+  doi = {10.4018/jswis.2009081901},
+  url = {https://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/jswis.2009081901},
+  urldate = {2025-06-08},
+  langid = {english}
 }
 
 @inproceedings{bothSolidBasedB2BData2025,
-  title     = {Towards {{Solid-Based B2B Data Value Chains}}},
+  title = {Towards {{Solid-Based B2B Data Value Chains}}},
   booktitle = {The {{Semantic Web}}: {{ESWC}} 2024 {{Satellite Events}}},
-  author    = {Both, Andreas and Yeboah, Dustin and Kastner, Thorsten and Schraudner, Daniel and Schmid, Sebastian and Braun, Christoph and Harth, Andreas and K{\"a}fer, Tobias},
-  editor    = {Mero{\~n}o Pe{\~n}uela, Albert and Corcho, Oscar and Groth, Paul and Simperl, Elena and Tamma, Valentina and Nuzzolese, Andrea Giovanni and {Poveda-Villal{\'o}n}, Maria and Sabou, Marta and Presutti, Valentina and Celino, Irene and Revenko, Artem and Raad, Joe and Sartini, Bruno and Lisena, Pasquale},
-  year      = {2025},
-  pages     = {138--142},
+  author = {Both, Andreas and Yeboah, Dustin and Kastner, Thorsten and Schraudner, Daniel and Schmid, Sebastian and Braun, Christoph and Harth, Andreas and Käfer, Tobias},
+  editor = {Meroño Peñuela, Albert and Corcho, Oscar and Groth, Paul and Simperl, Elena and Tamma, Valentina and Nuzzolese, Andrea Giovanni and Poveda-Villalón, Maria and Sabou, Marta and Presutti, Valentina and Celino, Irene and Revenko, Artem and Raad, Joe and Sartini, Bruno and Lisena, Pasquale},
+  date = {2025},
+  pages = {138--142},
   publisher = {Springer Nature Switzerland},
-  address   = {Cham},
-  doi       = {10.1007/978-3-031-78952-6_14},
-  isbn      = {978-3-031-78952-6},
-  langid    = {english}
+  location = {Cham},
+  doi = {10.1007/978-3-031-78952-6_14},
+  isbn = {978-3-031-78952-6},
+  langid = {english}
 }
 
 @inproceedings{mecklerWebLinkedData2023,
-  title     = {The {{Web}} and {{Linked Data}} as a {{Solid Foundation}} for {{Dataspaces}}},
+  title = {The {{Web}} and {{Linked Data}} as a {{Solid Foundation}} for {{Dataspaces}}},
   booktitle = {Companion {{Proceedings}} of the {{ACM Web Conference}} 2023},
-  author    = {Meckler, Sascha and Dorsch, Rene and Henselmann, Daniel and Harth, Andreas},
-  year      = {2023},
-  month     = apr,
-  series    = {{{WWW}} '23 {{Companion}}},
-  pages     = {1440--1446},
+  author = {Meckler, Sascha and Dorsch, Rene and Henselmann, Daniel and Harth, Andreas},
+  date = {2023-04-30},
+  series = {{{WWW}} '23 {{Companion}}},
+  pages = {1440--1446},
   publisher = {Association for Computing Machinery},
-  address   = {New York, NY, USA},
-  doi       = {10.1145/3543873.3587616},
-  url       = {https://dl.acm.org/doi/10.1145/3543873.3587616},
-  urldate   = {2025-05-03},
-  isbn      = {978-1-4503-9419-2}
+  location = {New York, NY, USA},
+  doi = {10.1145/3543873.3587616},
+  url = {https://dl.acm.org/doi/10.1145/3543873.3587616},
+  urldate = {2025-05-03},
+  isbn = {978-1-4503-9419-2}
 }
 
 @article{mollerIndustrialDataEcosystems2024,
-  title   = {Industrial Data Ecosystems and Data Spaces},
-  author  = {M{\"o}ller, Frederik and Jussen, Ilka and Springer, Virginia and Gie{\ss}, Anna and Schweihoff, Julia Christina and Gelhaar, Joshua and Guggenberger, Tobias and Otto, Boris},
-  year    = {2024},
-  month   = aug,
-  journal = {Electronic Markets},
-  volume  = {34},
-  number  = {1},
-  pages   = {41},
-  issn    = {1422-8890},
-  doi     = {10.1007/s12525-024-00724-0},
-  url     = {https://doi.org/10.1007/s12525-024-00724-0},
+  title = {Industrial Data Ecosystems and Data Spaces},
+  author = {Möller, Frederik and Jussen, Ilka and Springer, Virginia and Gieß, Anna and Schweihoff, Julia Christina and Gelhaar, Joshua and Guggenberger, Tobias and Otto, Boris},
+  date = {2024-08-06},
+  journaltitle = {Electronic Markets},
+  shortjournal = {Electron Markets},
+  volume = {34},
+  number = {1},
+  pages = {41},
+  issn = {1422-8890},
+  doi = {10.1007/s12525-024-00724-0},
+  url = {https://doi.org/10.1007/s12525-024-00724-0},
   urldate = {2025-05-03},
-  langid  = {english}
+  langid = {english}
 }
 
-@techreport{sambraSolidPlatformDecentralized2016,
-  title       = {Solid: {{A Platform}} for {{Decentralized Social Applications Based}} on {{Linked Data}}},
-  shorttitle  = {Solid},
-  author      = {Sambra, Andrei Vlad and Mansour, Essam and Hawke, Sandro and Zereba, Maged and Greco, Nicola and Ghanem, Abdurrahman and Zagidulin, Dmitri and Aboulnaga, Ashraf and {Berners-Lee}, Tim},
-  year        = {2016},
+@report{sambraSolidPlatformDecentralized2016,
+  title = {Solid: {{A Platform}} for {{Decentralized Social Applications Based}} on {{Linked Data}}},
+  shorttitle = {Solid},
+  author = {Sambra, Andrei Vlad and Mansour, Essam and Hawke, Sandro and Zereba, Maged and Greco, Nicola and Ghanem, Abdurrahman and Zagidulin, Dmitri and Aboulnaga, Ashraf and Berners-Lee, Tim},
+  date = {2016},
   institution = {MIT CSAIL \& Qatar Computing Research Institute},
-  url         = {https://cs.brown.edu/courses/csci2390/2021/readings/solid.pdf},
-  urldate     = {2025-06-08}
+  url = {https://cs.brown.edu/courses/csci2390/2021/readings/solid.pdf},
+  urldate = {2025-06-08}
 }
 
 @article{shoreZeroTrustWhat2021,
-  title      = {Zero {{Trust}}: {{The What}}, {{How}}, {{Why}}, and {{When}}},
+  title = {Zero {{Trust}}: {{The What}}, {{How}}, {{Why}}, and {{When}}},
   shorttitle = {Zero {{Trust}}},
-  author     = {Shore, Malcolm and Zeadally, Sherali and Keshariya, Astha},
-  year       = {2021},
-  month      = nov,
-  journal    = {Computer},
-  volume     = {54},
-  number     = {11},
-  pages      = {26--35},
-  issn       = {1558-0814},
-  doi        = {10.1109/MC.2021.3090018},
-  url        = {https://ieeexplore.ieee.org/document/9585170},
-  urldate    = {2025-06-08}
+  author = {Shore, Malcolm and Zeadally, Sherali and Keshariya, Astha},
+  date = {2021-11},
+  journaltitle = {Computer},
+  volume = {54},
+  number = {11},
+  pages = {26--35},
+  issn = {1558-0814},
+  doi = {10.1109/MC.2021.3090018},
+  url = {https://ieeexplore.ieee.org/document/9585170},
+  urldate = {2025-06-08}
 }
