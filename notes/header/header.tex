@@ -1,0 +1,25 @@
+% !TeX root = ../notes.tex
+
+\documentclass[
+    a4paper,
+    12pt,
+]{article}
+
+\input{header/packages.tex}
+
+\usepackage[figurename=Fig.]{caption}
+\makeatletter
+\renewcommand{\fnum@figure}{Abb. \thefigure}
+\makeatother
+\addto\captionsngerman{\renewcommand{\figurename}{Abb.}}
+
+\input{header/metadata.tex}
+
+\makeatletter
+\hypersetup{
+    pdfauthor={\@author},
+    pdftitle={\@title},
+    pdfsubject={\subject},
+    citecolor=blue
+}
+\makeatother

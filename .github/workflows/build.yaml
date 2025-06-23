@@ -20,3 +20,10 @@ jobs:
       tex-workdir: presentation
       tex-file: presentation
       output-name: 25_sez_solid_presentation
+
+  build-notes:
+    uses: ./.github/workflows/template_build_latex.yaml
+    with:
+      tex-workdir: notes
+      tex-file: notes
+      output-name: 25_sez_solid_notes
