@@ -3,10 +3,190 @@
 \section{Data Spaces und Data Ecosystems}
 
 \subsection{Datenaustausch für Lieferketten}
+
+\textbf{Data Sharing}
+\begin{itemize}
+    \item Data Sharing seit über 40 Jahren Bestandteil der Forschung
+    \begin{itemize}
+        \item Data Sharing: Prozess bei dem anderen Zugriff auf Daten gegeben wird, auf welche sie sonst nicht selbst Zugriff hätten
+    \end{itemize}
+    \item Daten für nahezu alle Geschäftsprozesse notwendig
+    \item früh: versch. Vorteile von \emph{Information Partnerships} erkannt, bspw. geteilte Kosten, Verteilung von Überkapazitäten durch gemeinsame Nutzung von Kundendaten
+    % \item hohe Integrationskosten, nur für reiche Unternehmen zugänglich
+    \item v.a. für Koordination von Lieferketten essentiell
+    \item Entgegenwirken von Fluktuationen in der Lieferkette nur mit Datenbasis möglich~\cite{mollerIndustrialDataEcosystems2024}
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Lieferketten}
+\begin{itemize}
+    \item starke Einschränkung der geteilten Daten und Informationen
+    \item sehr \emph{spezifische} Daten in \emph{bilateralen} Beziehungen
+    \item Data Sharing nur für bestimmten Zweck: Eindämmung negativer Effekte in Lieferketten
+    \item Angst vor Missbrauch oder Verletzung der Vertraulichkeit
+    \item \emph{Information Asymmetry}
+    \item keine Daten teilen $\to$ Verluste, ineffiziente Lieferketten $\to$ keine Option
+    \item Data Sharing benötigt Vertrauen in Wahrheitsgehalt geteilter Daten~\cite{mollerIndustrialDataEcosystems2024}
+\end{itemize}
+
+
 \subsection{Industrielle Data Ecosystems}
+
+\begin{itemize}
+    \item Erscheinung digital transformierter Systeme an Unternehmen
+    \item alternative Sicht zu zwischenbetrieblichem Data Sharing
+    \item dynamisches Data Sharing basierend auf gemeinsamen Werten (statt nur Geschäftsprozessen)
+    \item Entwicklung um einen geteilten Zweck, dynamisch
+    \item Gleichgewicht zwischen erhaltenem und gegebenem Aufwand (vgl. Information Asymmetry)
+    \item autonome multilaterale Akteure
+    \begin{itemize}
+        \item ergänzen sich gegenseitig
+        \item schaffen Netzwerkeffekte
+    \end{itemize}
+    \item zwischenbetriebliches Data Sharing + Anlehnung an biologische Ökosysteme $\to$ \emph{Data Ecosystems}
+    \begin{itemize}
+        \item Akteure interagieren und kooperieren
+        \item \enquote{Finden, Archivieren, Veröffentlichen, Konsumieren oder Wiederverwenden von Daten}
+        \item Förderung von Innovation, Wertschöpfung und Schaffung neuer Geschäfts
+        \item[$\Rightarrow$] Erstellen, Verwalten und Aufrechterhalten von Anreizen für Data Sharing
+    \end{itemize}
+    \item Kern: Beitrag jedes Akteurs
+    \begin{itemize}
+        \item Data User: Verwendung von Daten
+        \item Data Provider: Bereitstellung / Senden von Daten
+        \item Data Intermediary: Schnittstellen~\cite{mollerIndustrialDataEcosystems2024}
+    \end{itemize}
+\end{itemize}
+
+
 \subsection{Data Sharing Infrastructure}
-\subsection{Data Spaces}
-\subsection{Data Ecosystems}
+
+\begin{itemize}
+    \item Data Sharing benötigt technische Infrastruktur
+    \item Kategorien: basierend auf Data Intermediaries oder \emph{Inter-Organisational Information Systems} (IOIS)
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{IOIS}
+\begin{itemize}
+    \item v.a. in Lieferketten
+    \item Verbindung individueller Systeme von Betrieben (bspw. ERP) für bessere Integration und automatisiertem Data Sharing
+    \item meist bilateral oder multilaterale Netzwerke basierend auf einem zentralen Akteur
+    \item Skalierung sehr schwierig, bspw. bzgl. Datenschutz und Kontrolle (Datensouveränität)
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Data Spaces}
+\begin{itemize}
+    \item Vereinen von DI und IOIS (vgl. \autoref{fig:dual-nature-ds})
+    \item geteilter Raum für Unternehmen zur Suche nach vertrauenswürdigen Quellen
+    \item Antrieb für organisationsübergreifende Optimierung und Innovation
+    \item ähnlich zu DI als Vermittler zwischen Data User und Data Provider
+    \item Verwendung von \emph{Data Connectors}, ermöglichen bilaterales Data Sharing (vgl. IOIS)
+    \item Connectors: technisch sichergestellte Datensouveränität
+    \item dezentralisiert, keine zentrale Datenspeicherung, Data Provider
+    \item Data Sharing erst nach erfolgreicher Verhandlung
+    \item Generierung eines \emph{Trusted Pool}s an DE-Akteuren~\cite{mollerIndustrialDataEcosystems2024}
+\end{itemize}
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{../shared/assets/möller_dual_nature_ds.png}
+    \caption{Duale Natur von Data Spaces als Data Intermediaries und IOIs~\cite{mollerIndustrialDataEcosystems2024}}
+    \label{fig:dual-nature-ds}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{../shared/assets/möller_iois_di_ds.png}
+    \caption{Data Sharing mit IOIS, Data Intermediaries und Data Spaces~\cite{mollerIndustrialDataEcosystems2024}}
+\end{figure}
+
+
+\subsection{Data Spaces in Data Ecosystems}
+
+\begin{itemize}
+    \item Data Spaces als Motor für Data Ecosystems (s.o.)
+    \item dezentralisierte Daten"=Infrastruktur
+    \item entworfen für Datenaustausch über mehre Unternehmen hinweg
+    \item möglich durch Mechanismen für sicheres und vertrauenswürdiges Data Sharing
+    \item Garantie von Datensouveränität
+    \begin{itemize}
+        \item Data Provider entscheidet über Zugriffskontrolle und Verwendung von geteilten Daten
+    \end{itemize}
+    \item flexible Formen, erlaubt bestimmter Menge an Mitgliedern Zugriff auf sicheren, vertrauenswürdigen Raum für Data Sharing
+    \item Einbettung in Data Ecosystems möglich~\cite{mollerIndustrialDataEcosystems2024}
+\end{itemize}
+
+\vspace{1em}
+
+\begin{itemize}
+    \item \emph{Data Space Member}: Akteur, welcher direkt (technisch) am Datenaustausch über DS beteiligt ist
+    \item \emph{Data Ecosystem Member}: Teil des Ökosystems, aber nicht direkt am Datenaustausch durch DS beteiligt
+    \begin{itemize}
+        \item Beitrag zu Daten
+        \item Zugriff durch \emph{Data Space Connectors}
+        \begin{itemize}
+            \item Schnittstelle zwischen internen Systemen der DSM und des DS an sich
+            \item Erweiterungen möglich, bspw. zur Interpretation und technischer Durchsetzung von \emph{Data Usage Policies}~\cite{mollerIndustrialDataEcosystems2024}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{../shared/assets/möller_data_ecosystem.png}
+    \caption{Data Ecosystem am Beispiel von Catena-X und Mobility Data Space~\cite{mollerIndustrialDataEcosystems2024}}
+\end{figure}
+
+\textbf{Eigenschaften von Data Spaces}
+\begin{itemize}
+    \item verteilt
+    \begin{itemize}
+        \item DS sind verteilt by Design
+        \item benötigen keine physikalische Datenintegration
+        \item Daten bleiben bei Quelle, Zugang nur wenn notwendig
+    \end{itemize}
+
+    \item kein einheitliches Daten"=Schema notwendig
+    \begin{itemize}
+        \item Datenintegration auf semantischer Ebene
+        \item bspw. durch einheitliche \emph{Vocabularies}
+    \end{itemize}
+    
+    \item Datenredundanz
+    \begin{itemize}
+        \item durch verteilte Architektur
+        \item Daten können an versch. Orten ko-existieren
+    \end{itemize}
+    
+    \item verschachtelt und überlappend
+    \begin{itemize}
+        \item DS können verschachtelt oder überlappend sein
+        \item Data Provider und Data User können Mitglieder versch. DS sein
+        \item Data Sharing zwischen DS~\cite{mollerIndustrialDataEcosystems2024}
+    \end{itemize}
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Data Ecosystems}
+\begin{itemize}
+    \item DE entstehen um einen oder mehrere föderierte DS
+    \item repräsentieren gesamte kollaborative DS-Aktivitäten
+    \item Realisierung gemeinsamer Ziele der Akteure
+    \item DE können mehrere DS umfassen (techn. Integration mittels Schnittstellen)
+    \item Ziel: überlappende DE mit verbundenen DS $\to$ verhindern Bildung von großen Daten"=Silos
+    \item Governance"=Maßnahmen über alle Abstraktionsschichten möglich (DE, DS, Use Case)
+    \begin{itemize}
+        \item bspw. rechtliche Anforderungen, Regeln von DS, bilaterale Regeln
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{../shared/assets/möller_data_ecosystem.png}
+    \caption{Verschiedene Szenarien für Data Ecosystems~\cite{mollerIndustrialDataEcosystems2024}}
+\end{figure}
 
 
 \clearpage
