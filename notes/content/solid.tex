@@ -345,8 +345,55 @@
 \end{itemize}
 
 
-\subsection{Erweiterung}
+\subsection{Erweiterung: B2B-Datenwertschöpfungsketten}
 
-\cite{bothSolidBasedB2BData2025}
+\textbf{Motivation}~\cite{bothSolidBasedB2BData2025}
+\begin{itemize}
+    \item automatisierte Datenübertragung essenziell für Partner in einer Wertschöpfungskette
+    \item verschiedene Anforderungen zur Ausnutzung von daten"=getriebenen Services
+    \begin{itemize}
+        \item Maschinen"=Lesbarkeit des gesamten Datenaustauschs $\Rightarrow$ automatisierbar
+        \item Erfüllung rechtlicher Rahmenbedingungen: weitere Metadaten notwendig, bspw. Zweck für Data Sharing
+        \item Nachvollziehbarkeit, Robustheit
+    \end{itemize}
+    \item Solid bildet bereits Grundlage, aber noch nicht ausreichend
+    \item Teilen und Verknüpfen von Daten in B2B"=Umgebungen ohne \emph{alle} Daten zu teilen oder Informationen über Geschäftspartner preiszugeben
+    \begin{itemize}
+        \item Technologie zum Datenaustausch bei Bedarf
+        \item Möglichkeit von \emph{Constraints} beim Data Sharing
+    \end{itemize}
+    \item Erweiterung des Prozesses, V: universal unterstützte E2E"=Daten"=Wertschöpfungskette
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{Umsetzung der Anforderungen}~\cite{bothSolidBasedB2BData2025}
+\begin{itemize}
+    \item Maschinen"=Lesbarkeit
+    \begin{itemize}
+        \item zusätzliche Metadaten: Angabe eines \emph{Data Processing Purpose}s $P$
+        \begin{itemize}
+            \item repräsentiert minimal mögliche und notwendige Rechte
+        \end{itemize}
+        \item Weitergabe von Daten unter mind. genauso starken Restriktionen
+        \item in Metadaten wird zu einer Purpose"=Klasse verlinkt, welche entlang der Kette weitergegeben wird
+    \end{itemize}
+    
+    \item Weitergabe muss ursprüngliche Quelle verstecken, aber angeben, dass und wie es weitergegeben wurde $\to$ Nachvollziehbarkeit (bspw. externe Audits)
+    \begin{itemize}
+        \item Erweiterung der Metadaten
+        \item Anzeigen, dass Zugriffsrechte und Daten auf Freigabe durch Drittpartei basieren
+        \item Einführung einer \emph{Facade}-Klasse zum Verstecken des ursprüngliche Data Providers
+    \end{itemize}
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{Fazit}~\cite{bothSolidBasedB2BData2025}
+\begin{itemize}
+    \item weiterer Schritt in Richtung E2E-Verarbeitung von B2B Data Sharing und Weitergabe unter Berücksichtigung von Datensouveränität
+    \item Repräsentation über Linked Data $\to$ vollständig automatisierbare Verarbeitung + Nachvollziehbarkeit + Schutz von Geschäftsgeheimnissen
+\end{itemize}
+
 
 \subsection{Verwandte Konzepte}
