@@ -65,19 +65,33 @@
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{../shared/assets/meckler_sds_components.png}
-    \caption{Komponenten eines Solid Data Spaces~\cite{mecklerWebLinkedData2023}}
+    \caption{Komponenten eines Solid Data Spaces~\cite{mecklerWebLinkedData2023} \hl{Dreiecksdarstellung verwenden!}}
 \end{figure}
 
 \begin{itemize}
-    \item Identity Provider (IdP)
+    \item Identität
     \begin{itemize}
-        \item IdP eines Unternehmens verifizieren Identität eines Akteurs
+        \item Identity Provider (IdP) eines Unternehmens verifizieren Identität eines Akteurs
+        \item Austauschbarkeit, Kosten, Flexibilität
+        \item personenbezogene / kritische Daten $\to$ Vertrauen
     \end{itemize}
     
-    \item Solid Server
+    \item Pods (Data)
     \begin{itemize}
-        \item Hosten mehrerer Pods
         \item Pods: Datenspeicherung und Zugriffsregeln
+        \item RDF und Data Mapping von verschiedenen Standards
+        \begin{itemize}
+            \item Binärdateien schlecht verarbeitbar, Verbesserung durch Metadaten
+            \item RDF: lesbar für Mensch und Maschine, automatisierbare Semantik durch Linked Data
+            \item Baumstrukturen für Freigabe auf verschiedenen Ebenen
+            \begin{itemize}
+                \item bspw. Geo-Daten: Land, Bundesland, etc.
+            \end{itemize}
+            \item Referenzierung von Klassen und Properties aus Ontologien
+            \item Verwendung von Shared Vocabularies, Implementierung von \hl{Linked Data Prinzipien} $\Rightarrow$ selbsterklärende Daten, vernetzt mit verwandten Ressourcen
+            \item Integration von RDF-Daten via \emph{Extract-Transform-Load} (ETL) oder via GUI
+            \item binäre Daten in Pods zusammen mit Metadaten~\cite{mecklerWebLinkedData2023}
+        \end{itemize}
     \end{itemize}
     
     \item Solid Anwendungen
@@ -91,15 +105,6 @@
         \end{itemize}
     \end{itemize}
 
-    \item Data Mapping von verschiedenen Standards zu RDF
-    \begin{itemize}
-        \item lesbar für Mensch und Maschine (automatisierbar)
-        \item Referenzierung von Klassen und Properties aus Ontologien
-        \item Verwendung von Shared Vocabularies, Implementierung von \hl{Linked Data Prinzipien} $\Rightarrow$ selbsterklärende Daten, vernetzt mit verwandten Ressourcen
-    \end{itemize}
-
-    \item Integration von RDF-Daten via \emph{Extract-Transform-Load} (ETL) oder via GUI
-    \item binäre Daten in Pods zusammen mit Metadaten~\cite{mecklerWebLinkedData2023}
 \end{itemize}
 
 % TODO: Vgl. SDS IDS (@mecklerWebLinkedData2023)
@@ -228,6 +233,7 @@
 
 \textbf{Grundlegende Manipulation mit LDP}
 \begin{itemize}
+    \item Einfachheit, nur grundlegende, wohlbekannte Operationen, leicht ausführbar
     \item LDP definiert bestimmte HTTP"=Operationen auf Web"=Ressourcen~\cite{sambraSolidPlatformDecentralized2016}
     \item generische, standardisierte RESTful"=Methoden anstelle von starren APIs~\cite{sambraSolidPlatformDecentralized2016}
     \item zwei Konzepte
@@ -252,7 +258,8 @@
 \begin{itemize}
     \item LDP: nur einfache Anfragen, keine Filter und Aggregation
     \item[$\to$] optionale Unterstützung von SPARQL
-    \item Delegation komplizierter Operationen an Server $\to$ verminderter Dev-Aufwand~
+    \item Delegation komplizierter Operationen an Server $\to$ verminderter Dev-Aufwand
+    \item \hl{\emph{Federated Search}}, automatisierte Verknüpfung mehrerer Pods durch SPARQL (nicht selbst iterieren müssen)
     \item Klassifikation
     \begin{itemize}
         \item \emph{Link Following Queries}
@@ -306,6 +313,7 @@
 
     \item Live Updates / Notification Support
     \begin{itemize}
+        \item Effizienz: kein \emph{Busy Waiting} / iterative Pulls
         \item Live Updates bei Modifikation einer Ressource~\cite{sambraSolidPlatformDecentralized2016}
         \item Umsetzung via WebSocket"=Protokoll, PubSub"=System~\cite{sambraSolidPlatformDecentralized2016}
         \begin{itemize}
@@ -318,8 +326,16 @@
 \end{itemize}
 
 
-\subsection{Solid-Anwendungen}
-\hl{TODO: andere Überschrift}
+\subsection{Verwendung von Solid-Anwendungen}
+
+\begin{itemize}
+    \item Auswahl eines Pods durch Nutzer:in, für jeden Anwendungsfall einen anderen
+    \item Wie kommt Anwendung an Datentopf?
+    \item Änderung der Daten \emph{im} Pod
+    \item \hl{TODO: Herleitung, Dreieck, nach oben ziehen}
+\end{itemize}
+
+\vspace{1cm}
 
 \begin{itemize}
     \item Garantie von effizienter Performance durch Solid"=Protokolle~\cite{sambraSolidPlatformDecentralized2016}
