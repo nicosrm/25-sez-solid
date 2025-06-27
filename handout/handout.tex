@@ -1,27 +1,59 @@
-% !TeX root = handout.tex
+% **************************************************
+% Document Class Definition
+% **************************************************
+\documentclass[%
+    paper=A4,               % paper size --> A4 is default in Germany
+    ngerman,
+    parskip=half,           % spacing value / method for paragraphs
+    11pt,                   % font size
+    headings=normal,        % size of headings
+    bibliography=totoc,     % include bib in toc
+    listof=totoc,           % include listof entries in toc
+    chapterprefix=false,    % do not display a prefix for chapters
+    appendixprefix=false,   % but display a prefix for appendix chapter
+    draft=false,            % value for draft version
+]{scrartcl}%
 
-\input{header/header.tex}
+\input{setup.tex}
+
+\title{Die Zukunft des Datenmanagements?\\Data Spaces am Beispiel von Solid}
+\author{Nico Schramm}
+\date{\today}
 
 \begin{document}
 
 \maketitle
+\thispagestyle{headings}
 
-\begin{abstract}
-  \input{content/abstract.tex}
-\end{abstract}
 
 % content
 \input{content/intro.tex}
-\input{content/theory.tex}
-\input{content/data_spaces.tex}
+\input{content/concept.tex}
 \input{content/solid.tex}
-\input{content/related.tex}
+\input{content/assessment.tex}
 \input{content/future.tex}
 \input{content/conclusion.tex}
 
-\printbibliography[heading=bibintoc, title=Quellenverzeichnis]
 
-% \appendix
+{%
+    \setstretch{1.1}
+    \renewcommand{\bibfont}{\normalfont\small}
+    \setlength{\biblabelsep}{0.25em}
+    \setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+    % print all references that are not ot type online
+    \printbibliography[nottype=online]
+    \newrefcontext[labelprefix={@}]
+    % web pages are typically non-scientific resources, so we separate them from the scientific ones
+    % typically 
+    \printbibliography[heading=subbibliography,title={Webpages},type=online]
+}
+
+\listoffigures
+\thispagestyle{headings}
+
+\listoftables
+\thispagestyle{headings}
+
+%\lstlistoflistings
 
 \end{document}
-\endinput
