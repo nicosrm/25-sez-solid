@@ -66,3 +66,22 @@ Die tatsächliche Verteilung muss dabei nicht bekannt sein~\cite{sambraSolidPlat
 
 
 \subsection{Identität und Authentifizierung}
+
+Um Vertrauen, Datensouveränität und Datenschutz zu gewährleisten ist eine Authentifizierung von Akteuren notwendig.
+Zum Erreichen einer Dezentralisierung ist ein globaler \emph{Identity Space} notwendig, welcher zur RDF"=basierten Daten in den Pods sowie der gewünschten Erweiterbarkeit passt und relevante Links zu den Datenspeichern liefert.
+\emph{WebID} erfüllt die genannten Kriterien und wird daher in Solid verwendet~\cite{sambraSolidPlatformDecentralized2016}.
+
+Akteure besitzen eine WebID"=URI, welche ein \emph{WebID Profile Document} referenziert.
+Dieses enthält wiederum Referenzen auf den Pod und die Anwendungsdaten sowie weitere Dokumente, um das Profil zu beschreiben~\cite{solidcommunitygroupSolidWebIDProfile2024}.
+Das Profile Document wird bei einem \emph{Identity Provider} (meist Pod Provider) gespeichert, wodurch die Akteure die Kontrolle über die eigene Identität behalten~\cite{sambraSolidPlatformDecentralized2016}.
+
+Eine Besonderheit bei Solid ist, dass sich Akteure gegenüber Anwendungen nicht authentifizieren müssen.
+Eine Authentifizierung wird ggf. nur durchgeführt, um die WebID des Akteurs zu erlangen.
+Anschließend wird eine Authentifizierung nur zwischen dem Browser und den relevanten Pods durchgeführt~\cite{sambraSolidPlatformDecentralized2016}.
+
+Durch die Möglichkeit, Identitäten über mehrere Seiten hinweg zu verknüpfen, entsteht ein \emph{Web of Trust}.
+Dies ermöglicht es, Authentifizierungsentscheidungen ad-hoc basierend auf den Eigenschaften der Akteure, wie bspw. den Beziehungen zu anderen Akteuren, zu treffen~\cite{sambraSolidPlatformDecentralized2016}.
+Auf dieser Basis kann entschieden werden, wem vertraut werden kann, mit wem ein vertrauenswürdiger Datenaustausch möglich ist und ob den geteilten Daten vertraut werden kann.
+Somit wird ein großes Hindernis des Data Sharings direkt adressiert.
+
+% TODO: Den genauen Ablauf kann in \cite{sambraSolidPlatformDecentralized2016} nachgelesen werden.
