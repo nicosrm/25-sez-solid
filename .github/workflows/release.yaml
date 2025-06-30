@@ -18,10 +18,10 @@ jobs:
       permissions:
         contents: write
       steps:
-        - name: Download slides artifact
-          uses: actions/download-artifact@v4
-          with:
-            pattern: ${{ env.SLIDES_ARTIFACT_NAME }}
+        # - name: Download slides artifact
+        #   uses: actions/download-artifact@v4
+        #   with:
+        #     pattern: ${{ env.SLIDES_ARTIFACT_NAME }}
 
         - name: Download article artifact
           uses: actions/download-artifact@v4
@@ -31,6 +31,7 @@ jobs:
         - name: Create release
           uses: ncipollo/release-action@v1.14.0
           with:
-            artifacts: ${{ env.SLIDES_ARTIFACT_NAME }}/*, ${{ env.HANDOUT_ARTIFACT_NAME }}/*
+            # artifacts: ${{ env.SLIDES_ARTIFACT_NAME }}/*, ${{ env.HANDOUT_ARTIFACT_NAME }}/*
+            artifacts: ${{ env.HANDOUT_ARTIFACT_NAME }}/*
             body: "Release of version ${{ github.ref_name }}"
             allowUpdates: true
