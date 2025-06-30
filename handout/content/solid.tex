@@ -42,6 +42,7 @@ Da Binärdateien schlecht maschinell lesbar und somit schlecht automatisiert ver
 Ein lesbares Format für Mensch und Maschine ist jedoch anzustreben, um eine höhere Effizienz durch Automatisierung zu ermöglichen.
 Dafür wird das \emph{Resource Description Framework} (RDF) in Kombination mit \emph{Vocabularies} verwendet.
 Durch eine Verknüpfung nach dem \emph{Linked Data} Ansatz entstehen strukturierte Daten mit einer automatisierbaren Semantik, welche mit verwandten Ressourcen vernetzt sind~\cite{bizerLinkedDataStory2009,mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
+% TODO: Mesh-Gedanke
 Andere Datenstrukturen können mittels Mapping zu RDF oder als Binärdateien mit zusätzlichen Metadaten zur Speicherung der Semantik in Pods integriert werden~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
 
 Die Daten werden in Form von \emph{LDP"=Containern} gespeichert.
@@ -83,4 +84,22 @@ Dies ermöglicht es, Authentifizierungsentscheidungen ad-hoc basierend auf den E
 Auf dieser Basis kann entschieden werden, wem vertraut werden kann, mit wem ein vertrauenswürdiger Datenaustausch möglich ist und ob den geteilten Daten vertraut werden kann.
 Somit wird ein großes Hindernis des Data Sharings direkt adressiert.
 
-% TODO: Den genauen Ablauf kann in \cite{sambraSolidPlatformDecentralized2016} nachgelesen werden.
+
+\subsection{Erweiterung: B2B-Wertschöpfungsketten}
+
+Eine automatisierte Datenübertragung ist essenziell für Partner in einer Wertschöpfungskette, ist jedoch an weitere Anforderungen geknüpft.
+So müssen bspw. rechtliche Rahmenbedingungen garantiert und nachvollziehbar eingehalten werden.
+Solid bietet dafür bereits eine Grundlage, ist aber noch nicht ausreichend.
+Weitere Metadaten sind notwendig, um \emph{Constraints} für das Data Sharing zu etablieren~\cite{bothSolidBasedB2BData2025}.
+
+Zum einen kann über Metadaten ein \emph{Data Processing Purpose} angegeben werden, welche die minimal möglichen und notwendigen Rechte beschreibt.
+Die Weitergabe von Daten soll nur unter mindestens genauso starken Restriktionen erlaubt sein.
+Dafür führt \cite{bothSolidBasedB2BData2025} eine Purpose"=Klassen ein, welche weitergegeben werden muss~\cite{bothSolidBasedB2BData2025}.
+
+Andererseits soll die ursprüngliche Quelle bei der Weitergabe von Daten versteckt werden.
+Um eine spätere Nachvollziehbarkeit zu garantieren, soll jedoch angegeben werden, dass die Zugriffsrechte und weitergegebenen Daten auf einer Freigabe durch eine Drittpartei basiert.
+Dies wird durch eine \emph{Facade}"=Klasse umgesetzt, welche den ursprünglichen Data Provider versteckt~\cite{bothSolidBasedB2BData2025}.
+
+Diese Erweiterung zeigt die Möglichkeiten und Notwendigkeiten der Erweiterbarkeit von Solid.
+Sie dient als weiterer Schritt in Richtung E2E"=B2B"=Wertschöpfungsketten unter der Berücksichtigung des Schutzes von Daten und Geschäftsgeheimnissen.
+Allerdings ist weitere Forschung notwendig, um die verwendete Purpose"=Ontologie zu validieren, um vollständig automatisierbare Prozesse zu etablieren~\cite{bothSolidBasedB2BData2025}.
