@@ -1,32 +1,32 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:139.0) Gecko/20100101 Firefox/139.0" version="27.1.6" pages="3">
   <diagram name="architectures" id="TW-Pl4PVOoqliyeGaSN4">
-    <mxGraphModel dx="2027" dy="945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="811" dy="138" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="64m2rop3GXZwl_2_S2sW-119" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/bootstrap-vol-2/16/circle-half-128.png" vertex="1" parent="1">
-          <mxGeometry x="267.42" y="679" width="20" height="20" as="geometry" />
+          <mxGeometry x="193.42000000000002" y="676.97" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-120" value="&lt;div&gt;Data Prosumer&lt;/div&gt;&lt;div&gt;bzw. Connector&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=CMU;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" vertex="1" parent="1">
-          <mxGeometry x="293.42" y="669" width="110" height="40" as="geometry" />
+          <mxGeometry x="219.42000000000002" y="666.97" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-121" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="393.42" y="679" width="20" height="20" as="geometry" />
+          <mxGeometry x="329.42" y="676.97" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-122" value="&lt;div align=&quot;left&quot;&gt;Data Consumer&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=CMU;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" vertex="1" parent="1">
-          <mxGeometry x="419.42" y="674" width="110" height="30" as="geometry" />
+          <mxGeometry x="355.42" y="671.97" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-123" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/bootstrap-vol-2/16/circle-half-128.png;rotation=0;direction=north;" vertex="1" parent="1">
-          <mxGeometry x="517.42" y="679" width="20" height="20" as="geometry" />
+          <mxGeometry x="591.4200000000001" y="676.97" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-124" value="&lt;div align=&quot;left&quot;&gt;Data Intermediary&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=CMU;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" vertex="1" parent="1">
-          <mxGeometry x="543.42" y="674" width="120" height="30" as="geometry" />
+          <mxGeometry x="617.4200000000001" y="671.97" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-140" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/essential-app-1/16/share-link-connection-network-128.png" vertex="1" parent="1">
-          <mxGeometry x="663.42" y="679" width="20" height="20" as="geometry" />
+          <mxGeometry x="737.4200000000001" y="676.97" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-141" value="&lt;div align=&quot;left&quot;&gt;Data Space&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=CMU;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" vertex="1" parent="1">
-          <mxGeometry x="689.42" y="674" width="80" height="30" as="geometry" />
+          <mxGeometry x="763.4200000000001" y="671.97" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-144" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="160" y="470" width="716.8416329507874" height="196.97088913245545" as="geometry" />
@@ -188,6 +188,12 @@
         </mxCell>
         <mxCell id="64m2rop3GXZwl_2_S2sW-135" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/essential-app-1/16/share-link-connection-network-128.png" vertex="1" parent="64m2rop3GXZwl_2_S2sW-143">
           <mxGeometry x="87.466333698683" y="23.3036784752033" width="28" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="TApkLZbQQTvGUhAbI4in-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=1;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="465.41999999999996" y="676.97" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TApkLZbQQTvGUhAbI4in-2" value="&lt;div align=&quot;left&quot;&gt;Data Provider&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=CMU;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" vertex="1" parent="1">
+          <mxGeometry x="491.41999999999996" y="671.97" width="100" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
