@@ -7,14 +7,14 @@ permissions:
   contents: write
 
 jobs:
-  build-handout:
+  handout:
     uses: ./.github/workflows/template_build_latex.yaml
     with:
       tex-workdir: handout
       tex-file: handout
       output-name: 25_sez_solid_handout
 
-  build-presentation:
+  presentation:
     uses: ./.github/workflows/template_build_latex.yaml
     with:
       tex-workdir: presentation
