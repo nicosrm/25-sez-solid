@@ -4,22 +4,20 @@
 
 % Lieferketten -- IOIS
 Daten sind für nahezu alle Geschäftsprozesse notwendig, wie bspw. der Koordinierung und Optimierung von Lieferketten.
-\emph{Inter-Organisational Information Systems} (IOIS) (vgl. \autoref{fig:data-sharing-iois-di-ds} links) beschreiben bilaterale Beziehungen, wie bspw. Lieferketten, bei denen individuelle Systeme für eine tiefe Integration und automatisiertem Data Sharing verbunden werden.
+\emph{Inter-Organisational Information Systems} (IOIS) (vgl. \autoref{fig:data-sharing-iois-di-ds}) beschreiben bilaterale Beziehungen, wie bspw. Lieferketten, bei denen individuelle Systeme für eine tiefe Integration und automatisiertem Data Sharing verbunden werden.
 Dabei werden Daten für einen bestimmten Zweck geteilt, wie bspw. dem Entgegenwirken schädlicher Effekte in Lieferketten und der Steigerung von Effizienz.
 Aufgrund von mangelndem Vertrauen besteht die Angst vor Datenmissbrauch oder unberechtigter Weitergabe von Daten, wie bspw. Betriebsgeheimnissen, weshalb streng formalisierte Nutzungsrichtlinien notwendig sind.
 Keine Daten zu teilen würde jedoch zu ineffizienten Lieferketten und somit wirtschaftlichem Verlust führen, was keine Option für Unternehmen ist.
 Eine Skalierung solcher Beziehungen bringt jedoch Herausforderungen mit sich, wie bspw. Kontrollverlust oder unberechtigte Datenweitergabe~\cite{mollerIndustrialDataEcosystems2024}.
 
 \begin{figure}
-    \includegraphics[width=\textwidth]{./assets/moller_iois_di_ds.png}
-    \caption{Data Sharing in IOIS, Industrial Data Ecosystems mit Data Intermediaries, sowie Data Spaces~\cite{mollerIndustrialDataEcosystems2024}}
+    \includegraphics[width=\textwidth]{./assets/data_sharing_architectures.drawio.pdf}
+    \caption{Architekturen für Data Sharing~\cite[vgl.][]{mollerIndustrialDataEcosystems2024}}
     \label{fig:data-sharing-iois-di-ds}
-    % TODO: Bild ersetzen
 \end{figure}
 
 % Industrial Data Ecosystems -- Data Intermediaries
-Daher ist eine alternative Sicht auf zwischen"=betriebliches Data Sharing entstanden: \emph{Industrial Data Ecosystems} (vgl. \autoref{fig:data-sharing-iois-di-ds} mittig).
-% TODO: wie generieren diese Vertrauen?
+Daher ist eine alternative Sicht auf zwischen"=betriebliches Data Sharing entstanden: \emph{Industrial Data Ecosystems} (vgl. \autoref{fig:data-sharing-iois-di-ds}).
 Diese entwickeln sich dynamisch um einen geteilten Zweck und erhalten ein Gleichgewicht zwischen erhaltenem und gegebenem Aufwand.
 Daten sind somit nicht mehr nur Mittel zum Zweck, sondern eine strategische Ressource, um neue Geschäfte zu ermöglichen und Prozesse zu optimieren.
 Dies geschieht durch \emph{multilaterale} Akteure, welche miteinander interagieren und kooperieren.
@@ -29,13 +27,19 @@ Sie aggregieren, verarbeiten und verteilen relevante Daten, um deren Wert zu max
 Dadurch können Netzwerkeffekte entstehen und Innovation gefördert werden~\cite{mollerIndustrialDataEcosystems2024}.
 
 % Data Spaces
-\emph{Data Spaces} vereinen die Konzepte von IOIS und Data Intermediaries.
-Aufgrund der dezentralen Speicherung von Daten bei Data Providern werden \emph{Data Space Connectors} verwendet, um einen bilateralen Datenaustausch zu ermöglichen (vgl. IOIS).
+\emph{Data Spaces} vereinen die Konzepte von IOIS und Data Intermediaries (vgl. \autoref{fig:data-sharing-iois-di-ds}).
+Aufgrund der dezentralen Speicherung von Daten bei Data Providern (vgl. \autoref{fig:central-vs-decentral}) werden \emph{Data Space Connectors} verwendet, um einen bilateralen Datenaustausch zu ermöglichen (vgl. IOIS).
 Dieser erfolgt erst nach einer erfolgreichen Verhandlung der Rahmenbedingungen.
 Ähnlich wie Data Intermediaries bringen Data Spaces verschiedene Data Provider und User zusammen, um Netzwerkeffekte zu schaffen.
 Die Kontrolle über den Zugriff und Verwendung von Daten liegt stets beim jeweiligen Data Provider.
 Betriebliche Barrieren werden überwunden, in dem Datensouveränität technisch garantiert wird.
 Dadurch wird ein geteilter Raum für Akteure geschaffen, in dem ein vertrauenswürdiger Datenaustausch statt finden kann, wodurch zwischenbetriebliche Optimierung und Innovation gefördert werden kann~\cite{mollerIndustrialDataEcosystems2024}.
+
+\begin{figure}[b]
+    \includegraphics[width=0.7\textwidth]{./assets/central_vs_decentral.drawio.pdf}
+    \caption{Symbolbild für zentralisierte (links) vs. dezentralisierte Datenspeicherung (rechts)}
+    \label{fig:central-vs-decentral}
+\end{figure}
 
 % Eigenschaften von DS
 Data Spaces sind verteilt \emph{by Design} wodurch keine physikalische Datenintegration notwendig ist.
