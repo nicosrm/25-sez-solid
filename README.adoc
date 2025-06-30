@@ -1,27 +1,20 @@
 = Data Spaces am Beispiel von Solid
 
-== Abstrakt
-
-TBA
-
 == Kontext
 
 [cols=2,1]
 |===
 | Titel
-| Data Spaces am Beispiel von Solid
+| Die Zukunft des Datenmanagements? Data Spaces am Beispiel von Solid
 
-| Autor
-| Nico Schramm
-
-// | Beleg
-// | PDF-Version, link:src/handout.tex[LaTeX-Datei]
+| Handout
+| https://github.com/nicosrm/25-sez-solid/releases/latest/download/25_sez_solid_handout.pdf[PDF-Version], link:handout/handout.tex[LaTeX-Datei]
 
 // | Präsentation
 // | PDF-Version
 
 | Kontext
-| Modul “Innovative Methoden für Software Engineering der Zukunft” (Prof. Dr. Andreas Both, Sommersemester 2025) an der HTWK Leipzig
+| Oberseminar: “Innovative Methoden für Software Engineering der Zukunft” (Prof. Dr. Andreas Both, Sommersemester 2025) an der HTWK Leipzig
 
 | Lizenz
 | link:LICENSE[CC BY 4.0]
