@@ -35,25 +35,26 @@ Durch die Trennung, Standardisierung und somit Austauschbarkeit der einzelnen Ko
 \subsection{Datenmanagement und Datenzugriff}
 
 Daten werden, entsprechend des Data Space Konzepts, dezentral in sog. \emph{Personal Online Data Stores} (Pods) und nicht zentral bei den Anwendungen gespeichert~\cite{mecklerWebLinkedData2023}.
+Durch die Verwendung von Standards kann somit eine Interoperabilität auf der Daten"= statt der Anwendungsebene erzeugt werden, wodurch ein einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration möglich ist.
+
 % Datenstruktur
 Da Binärdateien schlecht maschinell lesbar und somit schlecht automatisiert verarbeitbar sind, müssen zusätzliche Metadaten gespeichert werden.
-Ein lesbares Format für Mensch und Maschine ist jedoch anzustreben, um eine Automatisierung zu ermöglichen.
-Dafür wird das \emph{Resource Description Framework} (RDF) verwendet, welches Daten als Subjekt"=Prädikat"=Objekt"=Tripel speichert (vgl. Semantic Web).
-Für die Strukturierung und Speicherung von Semantik werden \emph{Vocabularies} verwendet.
-In Kombination mit einer Verknüpfung nach dem Ansatz von \emph{Linked Data} entstehen automatisierbare, semantische Daten, welche mit verwandten Ressourcen vernetzt sind~\cite{bizerLinkedDataStory2009,mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
+Ein lesbares Format für Mensch und Maschine ist jedoch anzustreben, um eine höhere Effizienz durch Automatisierung zu ermöglichen.
+Dafür wird das \emph{Resource Description Framework} (RDF) in Kombination mit \emph{Vocabularies} verwendet.
+Durch eine Verknüpfung nach dem \emph{Linked Data} Ansatz entstehen strukturierte Daten mit einer automatisierbaren Semantik, welche mit verwandten Ressourcen vernetzt sind~\cite{bizerLinkedDataStory2009,mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
 Andere Datenstrukturen können mittels Mapping zu RDF oder als Binärdateien mit zusätzlichen Metadaten zur Speicherung der Semantik in Pods integriert werden~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
 
-Organisiert werden die Daten in \emph{LDP"=Containern}, welche vergleichbar mit einem Verzeichnis sind.
-Diese sind an sich selbst ein RDF"=Graph, wodurch eine Hierarchie durch Verschachtelung möglich ist.
-Auf jeder Ebene der Hierarchie kann eine Zugriffskontrolle über \emph{Access Control List} Ressourcen definiert werden.
-Es können unterschiedliche Rechte pro Akteur sowie pro Ressource bzw. Container eingerichtet werden.
+Die Daten werden in Form von \emph{LDP"=Containern} gespeichert.
+Diese sind an sich selbst ein RDF"=Graph, wodurch eine Hierarchie durch Verschachtelung möglich ist (vgl. Verzeichnisstruktur).
+Auf jeder Ebene der Hierarchie kann eine Zugriffskontrolle über \emph{Access Control List} (ACL) Ressourcen definiert werden.
+Es können unterschiedliche Rechte pro Akteur sowie pro Ressource bzw. Container eingerichtet werden, wodurch feingranularer Datenschutz gewährleistet werden kann.
 
 % Lesen und Schreiben
 Solid"=Anwendungen lesen und schreiben Daten direkt von und in den Pods.
-Da Pods interoperabel mit den Anwendungen sein müssen, um eine Austauschbarkeit zu gewährleisten, muss ein wohldefiniertes und möglich einfach implementierbares Protokoll zum Datenzugriff verwendet werden.
-Solid verwendet dabei RESTful"=Methoden basierend auf der \emph{Linked Data Platform} (LDP).
+Da Pods interoperabel mit den Anwendungen sein müssen, um eine Austauschbarkeit zu gewährleisten, muss ein wohldefiniertes und möglichst einfach implementierbares Protokoll zum Datenzugriff eingesetzt werden.
+Solid verwendet dafür RESTful"=Methoden basierend auf der \emph{Linked Data Platform} (LDP).
 Diese definiert bestimmte HTTP"=Operationen auf Web"=Ressourcen, wodurch alle CRUD"=Operationen abgedeckt werden.
-Um eine Ressource eindeutig zu identifizieren, ist jeder Ressource ein \emph{Uniform Resource Identifier} (URI) zugewiesen~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
+Um eine Ressource global eindeutig zu identifizieren, ist jeder Ressource ein \emph{Uniform Resource Identifier} (URI) zugewiesen~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
 
 % SPARQL
 Mit den LDP"=Methoden sind jedoch nur einfache Anfragen möglich.
@@ -61,8 +62,6 @@ Komplizierte Datenabfragen können optional mittels SPARQL unterstützt werden.
 Um den Entwicklungsaufwand zu verringern, werden diese Operationen an den Server delegiert.
 Dabei sind \emph{Local Queries}, welche nur innerhalb \emph{eines} Pods operieren, und \emph{Link Following Queries}, welche über mehrere Pods hinweg mittels Verfolgung von Links operieren, möglich.
 Die tatsächliche Verteilung muss dabei nicht bekannt sein~\cite{sambraSolidPlatformDecentralized2016}.
-
-\textcolor{red}{TODO: Zusammenfassung, Ziele}
 
 
 \subsection{Identität und Authentifizierung}
