@@ -2,6 +2,208 @@
 
 \section{Social Linked Data}
 
-\begin{frame}{Social Linked Data}
-    TBA
+\begin{frame}{Social Linked Data \footnotesize\cite{mecklerWebLinkedData2023}}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                % mögliche Implementierung des Data Space Konzeptes basiert auf Solid
+                \item Data Space Konzept basierend auf\\
+                      \emph{Social Linked Data} (Solid)
+                \item Ziel: offene, dezentralisierte Netzwerke für souveränen Datenaustausch
+                \item Definition von Protokollen für Verwaltung und Austausch von Daten, Zugriffskontrolle und Identitätsmanagement
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \includegraphics[width=0.5\textwidth]{./assets/solid_logo.pdf}
+                \caption{Solid-Logo~\cite{solidcommunitygroupSolidemblemsvg2019}}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Social Linked Data II \footnotesize\cite{mecklerWebLinkedData2023}}
+    \vspace{1em}
+    \begin{figure}
+        \includegraphics[height=5cm]{./assets/solid_triangle.drawio.pdf}
+        \caption{Solid-Komponenten}
+    \end{figure}
+    % - Gliederung von Anwendungen in drei Teile
+    %   - Anwendung als solches // Daten // Identität
+    % - Identitätskomp.: verifiziert Identität eines Akteurs zur Auth. für Datenzugriff
+    % - Daten und zugehörige Zugriffsregeln: dezentral in einen oder mehreren *Personal Online Data Stores* (Pods) gespeichert
+    % - Anwendung verwendet ID, um korrekten Pod zu identifizieren und um sich für Datenzugriff zu auth.
+    % - anschließend kann Anw. erforderliche Daten aus Pods lesen/schreiben
+\end{frame}
+
+
+\begin{frame}{Social Linked Data III \footnotesize\cite{mecklerWebLinkedData2023}}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \begin{itemize}
+                \item Trennung und Standardisierung
+                \item[$\Rightarrow$] Austauschbarkeit von Komponenten
+                \item[$\Rightarrow$] Schritt"=für"=Schritt"=Einführung
+                \item[$\Rightarrow$] geringe Einstiegsbarriere
+                \item[$\Rightarrow$] hohe Zugänglichkeit
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.6\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth]{./assets/solid_triangle.drawio.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\subsection{Datenmanagement und Datenzugriff}
+
+\begin{frame}{Datenstruktur}
+    \begin{itemize}
+        \item dezentrale Speicherung in \emph{Personal Online Data Stores} (Pods)~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}
+        \item Standardisierung $\to$ Interoperabilität auf Daten"= statt Anwendungsebene
+              % --> einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration
+        
+        \item Binärdaten\only<1>{?} \only<2->{mit Metadaten}
+        
+        \pause
+        \item lesbares Format \only<3->{$\to$ \emph{Resource Description Framework} (RDF) mit \emph{Vocabularies}~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
+        % bspw. <Tim Berners-Lee> <is a> <person> (vgl. Bizer)
+        
+        \pause
+        \pause
+        \item global eindeutige Identifikation via \emph{Uniform Resource Identifier} (URI)~\cite{sambraSolidPlatformDecentralized2016}
+        \begin{itemize}
+            \item \texttt{https://www.w3.org/People/Berners-Lee/card\#i}~\cite{bizerLinkedDataStory2009}
+        \end{itemize}
+
+        \pause
+        \item Verknüpfung via \emph{Linked Data} $\to$ Struktur \& automatisierbare Semantik~\cite{bizerLinkedDataStory2009,mecklerWebLinkedData2023}
+        
+        \pause
+        \item Mapping anderer Strukturen zu RDF~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}
+    \end{itemize}
+\end{frame}
+
+% TODO: RDF Erklärung? --> Bizer
+
+\begin{frame}{Datenstruktur II \footnotesize\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item (nicht-) RDF"=Dateien in \emph{LDP"=Container}
+                \item wiederum RDF"=Graph $\to$ Verschachtelung möglich
+                \item Zugriffskontrolle auf jeder Ebene mittels \emph{Access Control List} (ACL)
+                \begin{itemize}
+                    \item \texttt{resource.acl} oder \texttt{.acl}
+                \end{itemize}
+                
+                \item<2> unterschiedliche Rechte pro Akteur / Container
+                \item[$\Rightarrow$]<2> feingranularer Datenschutz und Zugriffskontrolle
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.4\textwidth}
+            \vspace{1em}
+            \begin{figure}
+                \includegraphics[height=4.5cm]{./assets/container_hierarchy.drawio.pdf}
+                \caption{Hierarchie \cite[vgl.][]{sambraSolidPlatformDecentralized2016}}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Read- und Write-Protokoll \footnotesize\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
+    \begin{itemize}
+        \item Anwendungen lesen und schreiben Daten direkt aus Pods
+        \item Interoperabilität der Pods mit Anwendungen\\
+              $\to$ wohldefiniertes, einfach implementierbares Protokoll\\
+              \only<2->{$\Rightarrow$ RESTful"=Methoden basierend auf \emph{Linked Data Platform} (LDP)}
+        \item<3-> komplizierte Datenabfragen mittels SPARQL (optional)
+    \end{itemize}
+\end{frame}
+
+
+% \begin{frame}{Datenabfragen \footnotesize\cite{sambraSolidPlatformDecentralized2016}}
+%     \begin{itemize}
+%         \item nur einfache Abfragen mittels LDP"=Methoden möglich
+%         \item komplizierte Datenabfragen mittels SPARQL (optional)
+%         \item Delegation an Server $\Rightarrow$ Entwicklungsaufwand $\downarrow$
+        
+%         \pause
+%         \item \emph{Local Queries}: innerhalb \emph{eines} Pods
+%         \item \emph{Link Following Queries}: über mehrere Pods hinweg
+%         \begin{itemize}
+%             \item via Link"=Following
+%             \item tatsächliche Verteilung muss nicht bekannt sein
+%         \end{itemize}
+%     \end{itemize}
+% \end{frame}
+
+
+\subsection{Identität und Authentifizierung}
+
+\begin{frame}{Authentifizierung \footnotesize\cite{sambraSolidPlatformDecentralized2016}}
+    \begin{itemize}
+        \item Vertrauen, Datensouveränität und Datenschutz $\to$ Authentifizierung
+        \item Dezentralisierung benötigt globalen \emph{Identity Space}
+        
+        \pause
+        \item passend zu RDF"=basierten Daten
+        \item Ermittlung der Identität und Profildaten
+        \item Ermittlung relevanter Links zum Pod und zu Anwendungsdaten
+        
+        \pause
+        \item[$\Rightarrow$] \emph{WebID}
+        \item[$\Rightarrow$] globales Identitätsmanagement basierend auf System dezentralisierter \emph{Identity Provider}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Identität}
+    \begin{itemize}
+        \item Akteure besitzen WebID"=URI~\cite{sambraSolidPlatformDecentralized2016}
+        
+        \item Referenz auf \emph{WebID Profile Document}~\cite{sambraSolidPlatformDecentralized2016,solidcommunitygroupSolidemblemsvg2019}
+        \begin{itemize}
+            \item Referenz auf Pod und Anwendungsdaten~\cite{solidcommunitygroupSolidWebIDProfile2024}
+            \item Referenz auf weitere Profildaten~\cite{solidcommunitygroupSolidWebIDProfile2024}
+            \item Webseite im RDF"=Format, global eindeutige URI~\cite{sambraSolidPlatformDecentralized2016}
+        \end{itemize}
+        
+        \item Speicherung bei Identity Provider (meist Pod Provider)~\cite{sambraSolidPlatformDecentralized2016}
+        \item[$\Rightarrow$] Kontrolle über eigene Identität bei Nutzenden~\cite{sambraSolidPlatformDecentralized2016}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Web of Trust \footnotesize\cite{sambraSolidPlatformDecentralized2016}}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Verknüpfung von Identitäten über mehrere Seiten\\
+                      $\Rightarrow$ \emph{Web of Trust}
+                
+                \item[$\Rightarrow$]<2-> ad-hoc Auth.-Entscheidungen basierend auf Profileigenschaften
+                    % bspw. Beziehungen zu anderen Agenten, Arbeitsstelle, Teil einer Gruppe etc. etc.
+                
+                \item[$\Rightarrow$]<3-> Wem kann ich vertrauen?\\ Kann ich den geteilten Daten vertrauen?
+                
+                \item[$\Rightarrow$]<4-> Adressierung eines Kern"=Hindernisses
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.4\textwidth}
+            \vspace{1em}
+            \begin{figure}
+                \includegraphics[height=4cm]{./assets/web_of_trust.drawio.pdf}
+                \caption{Web of Trust}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
