@@ -2,42 +2,78 @@
 
 \section{Einschätzung und Zukunft}
 
-\begin{frame}[allowframebreaks]{Einschätzung}
+\begin{frame}{Einschätzung}
     \begin{itemize}
         \item Zusammenführung vieler Ziele, um Vision näher an Realität zu bringen
         
-        \item Ansatz zur Gewährleistung von Datensouveränität
+        \pause
+        \item Vertrauen?
+        \pause
         \begin{itemize}
-            \item Konzepte zur Vermeidung von Datensilos
+            \item Ansatz für Datensouveränität, Datensilos? gesetzliche Vorgaben?
         \end{itemize}
+        % Ansatz zur Gewährleistung von Datensouveränität
+        % unterschiedliche Datenspeicher je nach Kontext, Web of Trust
+        % größerer Anreiz für Speicherung von Daten (<-- mehr Vertrauen und Kontrolle)
+        % Startpunkt, aber wie verhindern, dass Data User die Daten zwischenspeichern?
+        % Einhaltung gesetzlicher Vorgaben? --> o.g. Ansatz (Metadaten) benötigt weitere Forschung
 
-        \item Web of Trust $\to$ schnelle, effiziente Auth.-Entscheidungen
+        \pause
+        \item Aktualität und Konsistenz von Daten?
+        \pause
         \begin{itemize}
-            \item[$\to$] vertrauenswürdiges Data Sharing
+            \item Dezentralisierung und Datensouveränität, Anreiz $\uparrow$, Standardisierung
         \end{itemize}
-        
-        \item Standardisierung, Interoperabilität und Wiederverwendbarkeit
+        % mehr Vertrauen + Dezentralisierung + Datensouveränität 
+        %     --> Daten bei Nutzenden
+        %     --> größerer Anreiz zum Speichern von Daten
+        % können diese einfach aktuell halten
+        %     im Vgl. zu zentralisierten Ansatz, wo dieselben Daten verteilt bei vielen Unternehmen liegt
+        % Standardisierung --> größere Verfügbarkeit von Daten
+
+        \pause
+        \item Effizienz und Geschwindigkeit?
+        \pause
         \begin{itemize}
-            \item[$\to$] Entkopplung von Daten und Anwendungen
-            \item[$\to$] einfacher Wechsel von Anwendungen
-            % + Auslagerung von Std.-Fkt.
-            \item[$\to$] Kostensenkung $\to$ niedrigere Einstiegsbarrieren
-            \item[$\Rightarrow$] Wettbewerb $\uparrow$ $\Rightarrow$ Innovation $\uparrow$
+            \item Interoperabilität, automatisierbare Semantik, ggf. Mapping
         \end{itemize}
+        % standardisierte Speicherung von Daten
+        % Interoperabilität auf Daten- statt Anwendungsebene
+        % automatisierbare Semantik durch RDF + Vocabularies
+        % dadurch schnellere Datenintegration möglich, ggf. Mapping notwendig (teil- / automatisiert)
+
+        \pause
+        \item Zugänglichkeit unabhängig von Größe, Branche etc.?
+        \pause
+        \begin{itemize}
+            \item Interoperabilität, Aufwand $\downarrow$, niedrigere Einstiegsbarriere
+
+            \pause
+            \item[$\Rightarrow$] Förderung von Kooperation und Innovation
+        \end{itemize}
+        % Interoperabilität auf Daten- statt Anw.-Ebene
+        %     --> keine eigenen Daten mehr notwendig
+        %     --> Zugänglichkeit von Daten
+        % verminderter Aufwand durch Auslagerung von Std.-Fkt. + Wiederverwendbarkeit
+        % niedrigere Einstiegsbarriere
+        % Zugänglichkeit des Marktes
     \end{itemize}
 \end{frame}
+
 
 \begin{frame}{Zukunft}
     \begin{itemize}
         \item Digitalisierung zum Profitieren von Vorteilen
 
+        \pause
         \item Dezentralisierung und Interoperabilität
         \begin{itemize}
-            \item[$\to$] \emph{Data Mesh} statt \emph{Data Lake}
+            % \item[$\to$] \emph{Data Mesh} statt \emph{Data Lake}
             % TODO: Begriffseinführung weiter oben?
             \item[$\to$] Fokus auf dezentrale Architekturen
         \end{itemize}
-        
+
+        \pause
         \item Ermöglichung von ad"=hoc Daten- und Anwendungsintegrationen
         \begin{itemize}
             \item[$\to$] Mapping statt aufwendige ETL"=Prozesse
@@ -48,7 +84,8 @@
             % Branchen-agnostische Daten
             % Zukunft: Agenten interpretieren Daten nach meinen Kriterien, unabh. ob es User, Patient oder Benutzer heißt
         \end{itemize}
-        
+
+        \pause
         \item Datenstrukturen unabhängig von Anwendungen, Verfügbarkeit von Daten
         \begin{itemize}
             % aktuell: Wenn ich das mache, gehen Kunden weg?

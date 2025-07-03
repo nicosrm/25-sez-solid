@@ -8,12 +8,12 @@
             \begin{itemize}
                 % mögliche Implementierung des Data Space Konzeptes basiert auf Solid
                 \item Data Space Konzept basierend auf\\
-                      \emph{Social Linked Data} (Solid)
+                \emph{Social Linked Data} (Solid)
                 \item Ziel: offene, dezentralisierte Netzwerke für souveränen Datenaustausch
                 \item Definition von Protokollen für Verwaltung und Austausch von Daten, Zugriffskontrolle und Identitätsmanagement
             \end{itemize}
         \end{column}
-
+        
         \begin{column}{0.4\textwidth}
             \begin{figure}
                 \includegraphics[width=0.5\textwidth]{./assets/solid_logo.pdf}
@@ -50,7 +50,7 @@
                 \item[$\Rightarrow$] hohe Zugänglichkeit
             \end{itemize}
         \end{column}
-
+        
         \begin{column}{0.6\textwidth}
             \begin{figure}
                 \includegraphics[width=\textwidth]{./assets/solid_triangle.drawio.pdf}
@@ -66,12 +66,13 @@
     \begin{itemize}
         \item dezentrale Speicherung in \emph{Personal Online Data Stores} (Pods)~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}
         \item Standardisierung $\to$ Interoperabilität auf Daten"= statt Anwendungsebene
-              % --> einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration
+        % --> einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration
         
         \item Binärdaten\only<1>{?} \only<2->{mit Metadaten}
         
         \pause
-        \item lesbares Format \only<3->{$\to$ \emph{Resource Description Framework} (RDF) mit \emph{Vocabularies}~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
+        \pause
+        \item lesbares Format \only<4->{$\to$ \emph{Resource Description Framework} (RDF) mit \emph{Vocabularies}~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
         % bspw. <Tim Berners-Lee> <is a> <person> (vgl. Bizer)
         
         \pause
@@ -80,7 +81,13 @@
         \begin{itemize}
             \item \texttt{https://www.w3.org/People/Berners-Lee/card\#i}~\cite{bizerLinkedDataStory2009}
         \end{itemize}
-
+        
+        \pause
+        \item Zugriffskontrolle auf jeder Hierarchie-Ebene mittels \emph{Access Control List} (ACL)
+        % \begin{itemize}
+        %     \item \texttt{resource.acl} oder \texttt{.acl}
+        % \end{itemize}
+        
         \pause
         \item Verknüpfung via \emph{Linked Data} $\to$ Struktur \& automatisierbare Semantik~\cite{bizerLinkedDataStory2009,mecklerWebLinkedData2023}
         
@@ -91,50 +98,54 @@
 
 % TODO: RDF Erklärung? --> Bizer
 
-\begin{frame}{Datenstruktur II \footnotesize\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
-    \begin{columns}
-        \begin{column}{0.6\textwidth}
-            \begin{itemize}
-                \item (nicht-) RDF"=Dateien in \emph{LDP"=Container}
-                \item wiederum RDF"=Graph $\to$ Verschachtelung möglich
-                \item Zugriffskontrolle auf jeder Ebene mittels \emph{Access Control List} (ACL)
-                \begin{itemize}
-                    \item \texttt{resource.acl} oder \texttt{.acl}
-                \end{itemize}
-                
-                \item<2> unterschiedliche Rechte pro Akteur / Container
-                \item[$\Rightarrow$]<2> feingranularer Datenschutz und Zugriffskontrolle
-            \end{itemize}
-        \end{column}
+% \begin{frame}{Datenstruktur II \footnotesize\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
+%     \begin{columns}
+%         \begin{column}{0.6\textwidth}
+%             \begin{itemize}
+%                 \item (nicht-) RDF"=Dateien in \emph{LDP"=Container}
+%                 \item wiederum RDF"=Graph $\to$ Verschachtelung möglich
+%                 \item Zugriffskontrolle auf jeder Ebene mittels \emph{Access Control List} (ACL)
+%                 \begin{itemize}
+%                     \item \texttt{resource.acl} oder \texttt{.acl}
+%                 \end{itemize}
 
-        \begin{column}{0.4\textwidth}
-            \vspace{1em}
-            \begin{figure}
-                \includegraphics[height=4.5cm]{./assets/container_hierarchy.drawio.pdf}
-                \caption{Hierarchie \cite[vgl.][]{sambraSolidPlatformDecentralized2016}}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+%                 \item<2> unterschiedliche Rechte pro Akteur / Container
+%                 \item[$\Rightarrow$]<2> feingranularer Datenschutz und Zugriffskontrolle
+%             \end{itemize}
+%         \end{column}
+
+%         \begin{column}{0.4\textwidth}
+%             \vspace{1em}
+%             \begin{figure}
+%                 \includegraphics[height=4.5cm]{./assets/container_hierarchy.drawio.pdf}
+%                 \caption{Hierarchie \cite[vgl.][]{sambraSolidPlatformDecentralized2016}}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
 
 
 \begin{frame}{Read- und Write-Protokoll \footnotesize\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
     \begin{itemize}
         \item Anwendungen lesen und schreiben Daten direkt aus Pods
         \item Interoperabilität der Pods mit Anwendungen\\
-              $\to$ wohldefiniertes, einfach implementierbares Protokoll\\
-              \only<2->{$\Rightarrow$ RESTful"=Methoden basierend auf \emph{Linked Data Platform} (LDP)}
+        $\to$ wohldefiniertes, einfach implementierbares Protokoll\\
+        \only<2->{$\Rightarrow$ RESTful"=Methoden basierend auf \emph{Linked Data Platform} (LDP)}
         \item<3-> komplizierte Datenabfragen mittels SPARQL (optional)
     \end{itemize}
 \end{frame}
 
+% Fazit
+% Datenmanagement betrachtet
+% dezentrale Speicherung, Interoperabilität auf Daten- statt Anw.-Ebene
+% Wie identifizieren wir Datenspeicher und Akteure für Datenzugriff? 
 
 % \begin{frame}{Datenabfragen \footnotesize\cite{sambraSolidPlatformDecentralized2016}}
 %     \begin{itemize}
 %         \item nur einfache Abfragen mittels LDP"=Methoden möglich
 %         \item komplizierte Datenabfragen mittels SPARQL (optional)
 %         \item Delegation an Server $\Rightarrow$ Entwicklungsaufwand $\downarrow$
-        
+
 %         \pause
 %         \item \emph{Local Queries}: innerhalb \emph{eines} Pods
 %         \item \emph{Link Following Queries}: über mehrere Pods hinweg
@@ -187,17 +198,17 @@
         \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item Verknüpfung von Identitäten über mehrere Seiten\\
-                      $\Rightarrow$ \emph{Web of Trust}
+                $\Rightarrow$ \emph{Web of Trust}
                 
                 \item[$\Rightarrow$]<2-> ad-hoc Auth.-Entscheidungen basierend auf Profileigenschaften
-                    % bspw. Beziehungen zu anderen Agenten, Arbeitsstelle, Teil einer Gruppe etc. etc.
+                % bspw. Beziehungen zu anderen Agenten, Arbeitsstelle, Teil einer Gruppe etc. etc.
                 
                 \item[$\Rightarrow$]<3-> Wem kann ich vertrauen?\\ Kann ich den geteilten Daten vertrauen?
                 
                 \item[$\Rightarrow$]<4-> Adressierung eines Kern"=Hindernisses
             \end{itemize}
         \end{column}
-
+        
         \begin{column}{0.4\textwidth}
             \vspace{1em}
             \begin{figure}
@@ -220,7 +231,7 @@
             \item Constraints für Data Sharing
         \end{itemize}
     \end{itemize}
-
+    
     \pause
     \begin{itemize}
         \item Einführung zusätzlicher Metadaten
@@ -229,7 +240,7 @@
             \item Verstecken der Datenquelle, Angabe über Weitergabe
         \end{itemize}
     \end{itemize}
-
+    
     \pause
     \begin{itemize}
         \item weitere Validierung notwendig
