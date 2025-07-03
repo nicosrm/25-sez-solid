@@ -10,12 +10,13 @@
                 \item tiefe Integration, automatisiertes Data Sharing
                 \item zweckgebunden, bspw. Koordinierung und Optimierung von Lieferketten
                 % \item Mittel zum Zweck
-                \item mangelndes Vertrauen, streng formalisierte Nutzungsrichtlinien
-                \item keine Daten teilen? $\to$ Ineffizienz $\to$ Verlust
-                \item Herausforderungen bei Skalierung % Datenaustausch, Kontrolle
+                
+                \item<2-> mangelndes Vertrauen, streng formalisierte Nutzungsrichtlinien
+                \item<2-> keine Daten teilen? $\to$ Ineffizienz $\to$ Verlust
+                \item<2-> Herausforderungen bei Skalierung % Datenaustausch, Kontrolle
             \end{itemize}
         \end{column}
-
+        
         \begin{column}{0.4\textwidth}
             \begin{figure}
                 \includegraphics[height=0.5\textheight]{./assets/iois_architecture.drawio.pdf}
@@ -34,13 +35,15 @@
                 \item Gleichgewicht zwischen erhaltenem und gegebenem Aufwand
                 \item Daten als strategische Ressource % statt Mittel zum Zweck
                 % \item ermöglichen neue Geschäfte und Optimierung von Prozessen
-                \item Interaktion und Kooperation \alert{multilateraler} Akteure
-                \item Data User, Data Provider, Data Intermediary
-                \item offener, dynamischer Datenaustausch
-                \item Netzwerkeffekte, Förderung von Innovation
+                
+                \item<2-> Interaktion und Kooperation \alert{multilateraler} Akteure
+                \item<2-> Data User, Data Provider, Data Intermediary
+                
+                \item<3-> offener, dynamischer Datenaustausch
+                \item<3-> Netzwerkeffekte, Förderung von Innovation
             \end{itemize}
         \end{column}
-
+        
         \begin{column}{0.4\textwidth}
             \begin{figure}
                 \centering
@@ -58,14 +61,17 @@
             \begin{itemize}
                 \item Vereinen von IOIS und Data Intermediaries
                 \item dezentrale Speicherung von Daten bei Provider
-                \item \emph{Data Space Connectors} für bilateralen Datenaustausch % vgl. IOIS
-                \item Zusammenbringen von Data User und Provider % vgl. Data Intermediary
-                \item technische Garantie von Datensouveränität % -> Überwindung betriebl. Barrieren
-                % \item Kontrolle über Zugriff und Verwendung bei Provider
-                \item geteilter Raum für vertrauenswürdiges Data Sharing $\to$ Optimierung, Innovation
+                
+                \item<2-> \emph{Data Space Connectors} für bilateralen Datenaustausch % vgl. IOIS
+                \item<2-> Zusammenbringen von Data User und Provider % vgl. Data Intermediary
+                
+                \item<3-> technische Garantie von Datensouveränität
+                % -> Überwindung betriebl. Barrieren
+                % Kontrolle über Zugriff und Verwendung bei Provider
+                \item<3-> geteilter Raum für vertrauenswürdiges Data Sharing $\to$ Optimierung, Innovation
             \end{itemize}
         \end{column}
-
+        
         \begin{column}{0.4\textwidth}
             \begin{figure}
                 \includegraphics[height=0.5\textheight]{./assets/data_space_architecture.drawio.pdf}
@@ -91,29 +97,36 @@
     \begin{columns}
         \begin{column}{0.6\textwidth}
             \begin{itemize}
-                \item dezentralisierte Datenspeicherung\\
-                      $\to$ verteilt \emph{by Design}, Datenredundanz
+                \item dezentralisierte Datenspeicherung
+                \begin{itemize}
+                    \item[$\to$] verteilt \emph{by Design}, Datenredundanz
+                \end{itemize}
                 
-                \item Datenintegration auf semantische Ebene\\
-                      $\to$ kein einheitliches Daten"=Schema notwendig
+                \item<2-> Datenintegration auf semantische Ebene
+                \begin{itemize}
+                    \item[$\to$]<2-> kein einheitliches Daten"=Schema notwendig
+                \end{itemize}
                 
-                \item Verschachtelung / Überlappung von Data Spaces\\
-                      $\to$ \emph{Data Ecosystems}
-                      % um einen oder mehrere föderierte Data Spaces
-                      % technische Integration über Schnittstellen
-                      % Datensouveränität & Verhinderung großer Daten-Silos: verschachtelt && überlappend
+                \item<3-> Verschachtelung / Überlappung von Data Spaces
+                \begin{itemize}
+                    \item[$\to$]<3-> \emph{Data Ecosystems}
+                    % um einen oder mehrere föderierte Data Spaces
+                    % technische Integration über Schnittstellen
+                    % Datensouveränität & Verhinderung großer Daten-Silos: verschachtelt && überlappend
+                \end{itemize}
                 
-                \item Integration über Schnittstellen
-                \item Erreichen gemeinsamer Ziele
+                \item<4-> Integration über Schnittstellen
+                \item<4-> Erreichen gemeinsamer Ziele
             \end{itemize}
         \end{column}
 
-        % \pause
         \begin{column}{0.4\textwidth}
-            \begin{figure}
-                \includegraphics[height=0.5\textheight]{./assets/data_ecosystem_architecture.drawio.pdf}
-                \caption{Data Ecosystem}
-            \end{figure}
+            \only<3->{
+                \begin{figure}
+                    \includegraphics[height=0.5\textheight]{./assets/data_ecosystem_architecture.drawio.pdf}
+                    \caption{Data Ecosystem}
+                \end{figure}
+            }
         \end{column}
     \end{columns}
 \end{frame}
@@ -124,15 +137,19 @@
         \item flexible betriebliche Strukturen
         \item Zugang nur für bestimmte Akteure $\to$ \emph{Trusted Pool}
         \item sicheres, vertrauenswürdiges Data Sharing
+        
+        \pause
         \item Einbettung in Data Ecosystem
         \item \emph{Data Space Member} vs. \emph{Data Ecosystem Party}
-            % DSM: direkt technisch in DS eingebunden
-            % DEP: nur indirekter Zugriff über Data Space Connector (Schnittstelle zu DSM)
+        % DSM: direkt technisch in DS eingebunden
+        % DEP: nur indirekter Zugriff über Data Space Connector (Schnittstelle zu DSM)
+        
+        \pause
         \item Governance"=Maßnahmen auf allen Abstraktionsebenen
-            % Erfüllung rechtlicher Rahmenbedingungen
-            % Ebene von DE, DS oder Use Case
+        % Erfüllung rechtlicher Rahmenbedingungen
+        % Ebene von DE, DS oder Use Case
     \end{itemize}
     
     % Data Spaces erfüllen am meisten Kriterien
-    % Wie kann das funktionieren? $\to$ Social Linked Data
+    % Wie kann das funktionieren? --> Social Linked Data
 \end{frame}
