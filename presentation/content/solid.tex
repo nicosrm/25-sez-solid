@@ -129,9 +129,11 @@
 \begin{frame}{Read- und Write-Protokoll \footnotesize\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
     \begin{itemize}
         \item Anwendungen lesen und schreiben Daten direkt aus Pods
-        \item Interoperabilität der Pods mit Anwendungen\\
+        \item Interoperabilität der Pods mit Anwendungen\\ % TODO: gleichzeitig
         $\to$ wohldefiniertes, einfach implementierbares Protokoll\\
         \only<2->{$\Rightarrow$ RESTful"=Methoden basierend auf \emph{Linked Data Platform} (LDP)}
+        % TODO: welche?
+        % TODO: eigentlich RESTful-Services, die zusätzlich LDP erfüllen // soll keine neue Komp. sein, daher aufbauend auf RESTful
         \item<3-> komplizierte Datenabfragen mittels SPARQL (optional)
     \end{itemize}
 \end{frame}
@@ -171,7 +173,7 @@
         \item Ermittlung relevanter Links zum Pod und zu Anwendungsdaten
         
         \pause
-        \item[$\Rightarrow$] \emph{WebID}
+        \item[$\Rightarrow$] \emph{WebID} % TODO: aktueller Stand, jederzeit austauschbar
         \item[$\Rightarrow$] globales Identitätsmanagement basierend auf System dezentralisierter \emph{Identity Provider}
     \end{itemize}
 \end{frame}
@@ -210,6 +212,7 @@
                 
                 \item[$\Rightarrow$]<4-> Adressierung eines Kern"=Hindernisses
             \end{itemize}
+            % TODO: aber wenn kompromittiert, dann SCHLECHT
         \end{column}
         
         \begin{column}{0.4\textwidth}
@@ -239,7 +242,7 @@
     \begin{itemize}
         \item Einführung zusätzlicher Metadaten
         \begin{itemize}
-            \item \emph{Data Processing Purpose}
+            \item \emph{Data Processing Purpose} % Weitergabe muss sich trotzdem an ursprüngl. Zweck halte
             \item Verstecken der Datenquelle, Angabe über Weitergabe
         \end{itemize}
     \end{itemize}
@@ -251,4 +254,7 @@
         % \item Möglichkeit und Notwendigkeit zur Erweiterung von Solid
     \end{itemize}
     % TODO: Stichpunkte zum Erzählen
+    % TODO: Bild einfügen, Purpose erklären
 \end{frame}
+
+% TODO: Dreiecksbild auf meisten Folien klein in Ecke für Ref.

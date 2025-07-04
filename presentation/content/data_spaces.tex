@@ -62,7 +62,10 @@
                 \item Vereinen von IOIS und Data Intermediaries
                 \item dezentrale Speicherung von Daten bei Provider
                 
-                % TODO: ???
+                % TODO: ??? --> Kapselung, DS ist auch nur Data Provider, Kapselung
+                % merkt man nicht, wenn DS größer wird
+                % mehr Worte, was es meint --> Adapter / Mediator Pattern (weitergeben oder noch Kontrolle?)
+                % auslagern
                 \item<2-> \emph{Data Space Connectors} für bilateralen Datenaustausch % vgl. IOIS
                 \item<2-> Zusammenbringen von Data User und Provider % vgl. Data Intermediary
                 
@@ -76,6 +79,7 @@
         \begin{column}{0.4\textwidth}
             \begin{figure}
                 \includegraphics[height=0.5\textheight]{./assets/data_space_architecture.drawio.pdf}
+                % TODO: Label einbauen
                 \caption{Data Space Architektur}
             \end{figure}
         \end{column}
@@ -86,6 +90,10 @@
 \begin{frame}[c]{Data Spaces II \footnotesize\cite{mollerIndustrialDataEcosystems2024}}
     % verteilt by Design --> Daten bleiben bei Quelle, d.h. Data Provider
     % Zugang nur gewährt, wenn notwendig
+
+    % TODO: mehrere Personen
+    % jeder bringt seinen Teil mit stat großer DB
+    % Duplikate mit erklären
     \vspace{1.5em}
     \begin{figure}
         \includegraphics[height=0.6\textheight]{./assets/central_vs_decentral.drawio.pdf}
@@ -108,6 +116,13 @@
                     \item[$\to$]<2-> kein einheitliches Daten"=Schema notwendig
                 \end{itemize}
                 
+                % TODO: globaler DS sehr schwer, Datenstrukturen sehr spezif. für Teilbereich, aber trotzdem verknüpft
+                % jede Domäne hat noch weitere Daten, interessiert andere Seite nicht
+                % daher eigene DS, die genau diesen Teilbereich machen, starke Verknüpfung
+                % über DS hinweg nur schwache Verknüpfung, bspw. Produkte oder Krankheitsstatus für Arzt <-> AG
+                % daher DE
+                % hier auch DS-Connectors
+
                 \item<3-> Verschachtelung / Überlappung von Data Spaces
                 \begin{itemize}
                     \item[$\to$]<3-> \emph{Data Ecosystems}
@@ -134,6 +149,11 @@
 
 
 \begin{frame}{Data Spaces IV \footnotesize\cite{mollerIndustrialDataEcosystems2024}}
+    % TODO: prinzipiell überhaupt eine Chance, dass ich an benötigte Daten komme
+    % --> Daten-Lieferketten, muss zu best. Domäne kommen
+    % brauche Kontrollen --> DS Connectors
+    % Beispiel heraussuchen
+
     \begin{itemize}
         \item flexible betriebliche Strukturen
         \item Zugang nur für bestimmte Akteure $\to$ \emph{Trusted Pool}
@@ -153,4 +173,7 @@
     
     % Data Spaces erfüllen am meisten Kriterien
     % Wie kann das funktionieren? --> Social Linked Data
+    
+    % TODO: Überall Solid nennen, formally known as Social Linked Data
+    % daher kommt das
 \end{frame}
