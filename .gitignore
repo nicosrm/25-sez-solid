@@ -2,7 +2,7 @@
 acmguide.pdf
 handout/handout.pdf
 presentation/presentation.pdf
-notes/notes.pdf
+notes/*
 
 # LaTeX
 ## Core latex/pdflatex auxiliary files:
