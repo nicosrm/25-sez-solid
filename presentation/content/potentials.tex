@@ -21,20 +21,33 @@
 \end{frame}
 
 \begin{frame}{Vertrauen II}
-    \textbf{Wem kann ich vertrauen? Ist das wirklich dieser Akteur?}
-    \begin{itemize}
-        \item[$\to$] Authentifizierungsverfahren
-        \item[$\to$] Vertrauen in geteilte Daten
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \textbf{Wem kann ich vertrauen?\\Ist das wirklich dieser Akteur?}
+            \begin{itemize}
+                \item[$\to$] Authentifizierungsverfahren
+                \item[$\to$] Vertrauen in geteilte Daten
+                
+                % jemand will Studie mit falschen Daten verfälschen, Medikament was nicht wirkt
+        
+                \item[$\Rightarrow$]<2-> über Vertrauen in andere Akteure
+                \item[$\Rightarrow$]<2-> ad"=hoc Data Sharing möglich
+            \end{itemize}
+        \end{column}
 
-        \pause
-        \item[$\Rightarrow$] basierend auf Netzwerk $\to$ \emph{Web of Trust}
-            % TODO: schon Umsetzung, eher Vertrauen in Akteure, später: kann nicht alle kennen, daher Web of Trust
-        \item[$\Rightarrow$] ad"=hoc Data Sharing möglich
-    \end{itemize}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=5cm]{./assets/trust_question.drawio.pdf}
+                % TODO: Grafik Export
+                \caption{Symbolbild Vertrauen}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Vertrauen III}
-    \textbf{Einhaltung gesetzlicher Maßnahmen}
+    \textbf{Einhaltung gesetzlicher Vorgaben}
     \begin{itemize}
         \item technische Maßnahmen notwendig
 
@@ -91,15 +104,21 @@
     \begin{itemize}
         % wenn oben erfüllt, dann können wir ... entgegenwirken
         \item[?] hohe Kosten und Aufwand
+        \pause
+        \begin{itemize}
+            \item Automatisierung $\to$ niedrigere Kosten und Aufwand
+        \end{itemize}
+
+        \pause
         \item[?] wenig verfügbare Daten, proprietäre Datenformate
+        \pause
+        \begin{itemize}
+            \item breitere Verfügbarkeit von Daten, Interoperabilität, offene Standards
+        \end{itemize}
     \end{itemize}
 
     \pause
     \begin{itemize}
-        \item Automatisierung $\to$ niedrigere Kosten und Aufwand
-        \item breitere Verfügbarkeit von Daten, Interoperabilität, offene Standards
-
-        \pause
         \item[$\Rightarrow$] niedrigere Einstiegsbarrieren
         \item[$\Rightarrow$] Zugänglichkeit $\Rightarrow$ Wettbewerb, Innovation
     \end{itemize}
@@ -107,9 +126,20 @@
 
 
 \begin{frame}{Wie erreichen wir das?}
-    % TODO: Zusammenfassung der einzelnen Teilaspekte
-    \Large Kooperation verschiedener Akteure in einem vertrauenswürdigen,
-           offenen, interoperablen System für Data Sharing
+    \fbox{Datensouveränität\strut}
+    \fbox{Dezentralisierung\strut}
+    \fbox{Interoperabilität\strut}
+    
+    \fbox{Verfügbarkeit \& Aktualität\strut}
+    \fbox{Automatisierung\strut}
+    \fbox{ad-hoc Authentifizierung\strut}
+
+    \vspace{1em}
+
+    \begin{itemize}
+        \large
+        \item[$\Rightarrow$] Kooperation verschiedener Akteure in einem vertrauenswürdigen, offenen, interoperablen System für Data Sharing
+    \end{itemize}
 
     % hier setzt Konzept Data Spaces an
     % ermöglicht multilaterales, sicheres Data Sharing

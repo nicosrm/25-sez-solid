@@ -1,14 +1,17 @@
 % !TeX root = ../presentation.tex
 
-\section{Social Linked Data}
+\section{Solid}
 
-\begin{frame}{Social Linked Data \footnotesize\cite{mecklerWebLinkedData2023}}
+% TODO: Dreiecksbild auf meisten Folien klein in Ecke für Ref.
+
+\begin{frame}{Solid \footnotesize\cite{mecklerWebLinkedData2023}}
     \begin{columns}
         \begin{column}{0.6\textwidth}
             \begin{itemize}
                 % mögliche Implementierung des Data Space Konzeptes basiert auf Solid
                 \item Data Space Konzept basierend auf\\
-                \emph{Social Linked Data} (Solid)
+                    \emph{Solid} (ehem. Social Linked Data)
+                    % TODO: Herkunft von Social Linked Data
                 \item<2-> Ziel: offene, dezentralisierte Netzwerke für souveränen Datenaustausch
                 \item<3-> Definition von Protokollen für Verwaltung und Austausch von Daten, Zugriffskontrolle und Identitätsmanagement
             \end{itemize}
@@ -18,13 +21,15 @@
             \begin{figure}
                 \includegraphics[width=0.5\textwidth]{./assets/solid_logo.pdf}
                 \caption{Solid-Logo~\cite{solidcommunitygroupSolidemblemsvg2019}}
+                % TODO: Anw. <-> Daten // Lücke ID <-> Anw.
+                % "identifiziert" --> "Identifizierung"
             \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
 
 
-\begin{frame}{Social Linked Data II \footnotesize\cite{mecklerWebLinkedData2023}}
+\begin{frame}{Solid II \footnotesize\cite{mecklerWebLinkedData2023}}
     \vspace{1em}
     \begin{figure}
         \includegraphics[height=5cm]{./assets/solid_triangle.drawio.pdf}
@@ -39,7 +44,7 @@
 \end{frame}
 
 
-\begin{frame}{Social Linked Data III \footnotesize\cite{mecklerWebLinkedData2023}}
+\begin{frame}{Solid III \footnotesize\cite{mecklerWebLinkedData2023}}
     \begin{columns}
         \begin{column}{0.4\textwidth}
             \begin{itemize}
@@ -55,6 +60,7 @@
         \begin{column}{0.6\textwidth}
             \begin{figure}
                 \includegraphics[width=\textwidth]{./assets/solid_triangle.drawio.pdf}
+                % an Tafel malen
             \end{figure}
         \end{column}
     \end{columns}
@@ -69,12 +75,14 @@
         \item Standardisierung $\to$ Interoperabilität auf Daten"= statt Anwendungsebene
         % --> einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration
         
-        \item Binärdaten\only<1>{?} \only<2->{mit Metadaten}
+        \item Binärdaten\only<1|handout:0>{?} \only<2->{mit Metadaten}
+        % TODO: Durchstreichen
         
         \pause
         \pause
         \item lesbares Format \only<4->{$\to$ \emph{Resource Description Framework} (RDF) mit \emph{Vocabularies}~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
         % bspw. <Tim Berners-Lee> <is a> <person> (vgl. Bizer)
+        % TODO: RDF-Erklärung höchstens kurz !!!
         
         \pause
         \pause
@@ -88,16 +96,12 @@
         
         \pause
         \item Zugriffskontrolle auf jeder Hierarchie-Ebene mittels \emph{Access Control List} (ACL)
-        % \begin{itemize}
-        %     \item \texttt{resource.acl} oder \texttt{.acl}
-        % \end{itemize}
         
         \pause
         \item Mapping anderer Strukturen zu RDF~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}
     \end{itemize}
 \end{frame}
 
-% TODO: RDF Erklärung? --> Bizer
 
 % \begin{frame}{Datenstruktur II \footnotesize\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
 %     \begin{columns}
@@ -129,11 +133,17 @@
 \begin{frame}{Read- und Write-Protokoll \footnotesize\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
     \begin{itemize}
         \item Anwendungen lesen und schreiben Daten direkt aus Pods
-        \item Interoperabilität der Pods mit Anwendungen\\ % TODO: gleichzeitig
-        $\to$ wohldefiniertes, einfach implementierbares Protokoll\\
-        \only<2->{$\Rightarrow$ RESTful"=Methoden basierend auf \emph{Linked Data Platform} (LDP)}
-        % TODO: welche?
-        % TODO: eigentlich RESTful-Services, die zusätzlich LDP erfüllen // soll keine neue Komp. sein, daher aufbauend auf RESTful
+        \item Interoperabilität der Pods mit Anwendungen\\
+            und wohldefiniertes, einfach implementierbares Protokoll
+            % möglichst viel wiederverwenden, was bereits vorhanden ist
+            % soll keine neue Komponenten sein --> aufbauend auf RESTful
+        \item[$\Rightarrow$]<2-> RESTful"=Service, welche \emph{Linked Data Platform} (LDP) erfüllen
+        \begin{itemize}
+            % LDP: beschreibt Datenformat
+            %   Einteilung in Ressourcen und Containern, Paging
+            \item<2-> \texttt{HTTP GET}, \texttt{POST}, \texttt{PATCH}, \texttt{DELETE} etc.~\cite{sambraSolidPlatformDecentralized2016}
+        \end{itemize}
+
         \item<3-> komplizierte Datenabfragen mittels SPARQL (optional)
     \end{itemize}
 \end{frame}
@@ -167,34 +177,47 @@
         \item Vertrauen, Datensouveränität und Datenschutz $\to$ Authentifizierung
         \item Dezentralisierung benötigt globalen \emph{Identity Space}
         
-        \pause
-        \item passend zu RDF"=basierten Daten
-        \item Ermittlung der Identität und Profildaten
-        \item Ermittlung relevanter Links zum Pod und zu Anwendungsdaten
+        \item<2-> passend zu RDF"=basierten Daten
+        \item<2-> Ermittlung der Identität und Profildaten
+        \item<2-> Ermittlung relevanter Links zum Pod und zu Anwendungsdaten
         
-        \pause
-        \item[$\Rightarrow$] \emph{WebID} % TODO: aktueller Stand, jederzeit austauschbar
-        \item[$\Rightarrow$] globales Identitätsmanagement basierend auf System dezentralisierter \emph{Identity Provider}
+        \item[$\Rightarrow$]<3-> aktuell: \emph{WebID} (austauschbar)
+        \item[$\Rightarrow$]<3-> globales Identitätsmanagement basierend auf System dezentralisierter \emph{Identity Provider}
     \end{itemize}
 \end{frame}
 
 
 \begin{frame}{Identität}
-    \begin{itemize}
-        \item Akteure besitzen WebID"=URI~\cite{sambraSolidPlatformDecentralized2016}
-        
-        \item Referenz auf \emph{WebID Profile Document}~\cite{sambraSolidPlatformDecentralized2016,solidcommunitygroupSolidemblemsvg2019}
-        \pause
-        \begin{itemize}
-            \item Referenz auf Pod und Anwendungsdaten~\cite{solidcommunitygroupSolidWebIDProfile2024}
-            \item Referenz auf weitere Profildaten~\cite{solidcommunitygroupSolidWebIDProfile2024}
-            \item Webseite im RDF"=Format, global eindeutige URI~\cite{sambraSolidPlatformDecentralized2016}
-        \end{itemize}
-        
-        \pause
-        \item Speicherung bei Identity Provider (meist Pod Provider)~\cite{sambraSolidPlatformDecentralized2016}
-        \item[$\Rightarrow$] Kontrolle über eigene Identität bei Nutzenden~\cite{sambraSolidPlatformDecentralized2016}
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.55\textwidth}
+            \begin{itemize}
+                \item Akteure besitzen WebID"=URI~\cite{sambraSolidPlatformDecentralized2016}
+                
+                \item Referenz auf \emph{WebID Profile Document}~\cite{sambraSolidPlatformDecentralized2016,solidcommunitygroupSolidemblemsvg2019}
+                
+                \begin{itemize}
+                    \item<2-> Referenz auf Pod und Anwendungsdaten~\cite{solidcommunitygroupSolidWebIDProfile2024}
+                    \item<2-> Referenz auf weitere Profildaten~\cite{solidcommunitygroupSolidWebIDProfile2024}
+                    % Webseite im RDF"=Format, global eindeutige URI~\cite{sambraSolidPlatformDecentralized2016}
+                \end{itemize}
+                
+                \item<3-> Speicherung bei Identity Provider\\
+                    (meist Pod Provider)~\cite{sambraSolidPlatformDecentralized2016}
+                \item[$\Rightarrow$]<3-> Kontrolle über eigene Identität bei Nutzenden~\cite{sambraSolidPlatformDecentralized2016}
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.45\textwidth}
+            \only<2->{
+                \begin{figure}
+                    \centering
+                    \includegraphics[height=5.5cm]{./assets/profile.drawio.pdf}
+                    \caption{Solid Profil~\cite[vgl.][]{sambraSolidPlatformDecentralized2016,solidcommunitygroupSolidWebIDProfile2024}}
+                    % TODO: WebID URI Rand kleiner
+                \end{figure}
+            }
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
@@ -204,15 +227,17 @@
             \begin{itemize}
                 \item Verknüpfung von Identitäten über mehrere Seiten\\
                 $\Rightarrow$ \emph{Web of Trust}
+                % hilfreich, da man nicht alle Akteure in einem DS / DE kennen kann
                 
                 \item[$\Rightarrow$]<2-> ad-hoc Auth.-Entscheidungen basierend auf Profileigenschaften
-                % bspw. Beziehungen zu anderen Agenten, Arbeitsstelle, Teil einer Gruppe etc. etc.
+                % bspw. Beziehungen zu anderen Akteuren, Arbeitsstelle, Teil einer Gruppe etc. etc.
+                % transitives Vertrauen
                 
                 \item[$\Rightarrow$]<3-> Wem kann ich vertrauen?\\ Kann ich den geteilten Daten vertrauen?
                 
                 \item[$\Rightarrow$]<4-> Adressierung eines Kern"=Hindernisses
             \end{itemize}
-            % TODO: aber wenn kompromittiert, dann SCHLECHT
+            % aber wenn ein Akteur kompromittiert, dann SCHLECHT
         \end{column}
         
         \begin{column}{0.4\textwidth}
@@ -226,35 +251,45 @@
 \end{frame}
 
 
-\subsection{Erweiterung: B2B-Wertschöpfungsketten}
+\subsection{Erweiterung: Wertschöpfungsketten}
 
-\begin{frame}{B2B-Wertschöpfungsketten \footnotesize\cite{bothSolidBasedB2BData2025}}
+\begin{frame}{Erweiterung: Wertschöpfungsketten \footnotesize\cite{bothSolidBasedB2BData2025}}
     \begin{itemize}
-        \item automatisierte Datenübertragung essenziell für Partner in Wertschöpfungsketten
+        \item automatisierte Datenübertragung essenziell für Partner:in in Wertschöpfungsketten
         \item weitere Anforderungen
         \begin{itemize}
             \item garantierte, nachvollziehbare Einhaltung rechtlicher Rahmenbedingungen
             \item Constraints für Data Sharing
         \end{itemize}
     \end{itemize}
+
+    \begin{figure}
+        \includegraphics[width=\textwidth]{./assets/example_horizontal.drawio.pdf}
+        \caption{Beispiel: Datenspende}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Erweiterung: Wertschöpfungsketten II \footnotesize\cite{bothSolidBasedB2BData2025}}
+    \addtocounter{figure}{-1}
+    \begin{figure}
+        \includegraphics[width=\textwidth]{./assets/example_horizontal.drawio.pdf}
+        \caption{Beispiel: Datenspende}
+    \end{figure}
     
-    \pause
+    \vspace{-1em}
+
     \begin{itemize}
         \item Einführung zusätzlicher Metadaten
         \begin{itemize}
-            \item \emph{Data Processing Purpose} % Weitergabe muss sich trotzdem an ursprüngl. Zweck halte
+            \item \emph{Data Processing Purpose} $P$ % Weitergabe muss sich trotzdem an ursprüngl. Zweck halte
             \item Verstecken der Datenquelle, Angabe über Weitergabe
         \end{itemize}
-    \end{itemize}
-    
-    \pause
-    \begin{itemize}
-        \item weitere Validierung notwendig
-        % \item weiterer Schritt in Richtung E2E-B2B-Wertschöpfungsketten
-        % \item Möglichkeit und Notwendigkeit zur Erweiterung von Solid
-    \end{itemize}
-    % TODO: Stichpunkte zum Erzählen
-    % TODO: Bild einfügen, Purpose erklären
-\end{frame}
 
-% TODO: Dreiecksbild auf meisten Folien klein in Ecke für Ref.
+        \item<2-> weitere Validierung notwendig
+        % weiterer Schritt in Richtung E2E-B2B-Wertschöpfungsketten
+        % Möglichkeit und Notwendigkeit zur Erweiterung von Solid
+    \end{itemize}
+
+    % TODO: Stichpunkte zum Erzählen
+\end{frame}
