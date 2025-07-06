@@ -1,6 +1,4 @@
-= Data Spaces am Beispiel von Solid
-
-== Kontext
+= Die Zukunft des Datenmanagements? Data Spaces am Beispiel von Solid
 
 [cols=2,1]
 |===
