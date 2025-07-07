@@ -16,11 +16,13 @@
                 \item<2-> \alert{Data Sharing}: anderen Zugriff auf Daten gewähren, auf die sie selbst keinen hätten~\cite{mollerIndustrialDataEcosystems2024}
                 
                 \item<3-> viele Bedenken beim Teilen von Daten~\cite{mollerIndustrialDataEcosystems2024}
-                \begin{itemize}
-                    % Angst vor unberechtigter Weitergabe
-                    % Missbrauch von Daten
-                    % Kontrollverlust
-                    
+
+                \note{Bedenken}
+                \note[item]{Angst vor unberechtigter Weitergabe}
+                \note[item]{Missbrauch von Daten}
+                \note[item]{Kontrollverlust}
+
+                \begin{itemize}    
                     \item<4->[$\Rightarrow$] zurückhaltendes Data Sharing
                 \end{itemize}
 
@@ -46,23 +48,32 @@
             \centering
             \includegraphics[height=5cm]{./assets/process_view.drawio.pdf}
         \end{subfigure}
-        % aktuell findet Entw. wie folgt statt
-        % - für einen bestimmten Prozess brauche ich folgende Daten
-        % - dafür spezielle Datenspeicher entwerfen und entlang einer Prozesskette integrieren
-        % - zwei Endresultate integrieren, bspw. Krankschreibung von Krankenkasse und Arbeitgeber
-        % ==> aufwendig!
         %
-        % wo wir hin wollen, sind Daten-getriebene Prozesse
+        \note{
+            \begin{itemize}
+                \item aktuell findet Entw. wie folgt statt
+                \item für einen bestimmten Prozess brauche ich folgende Daten
+                \item dafür spezielle Datenspeicher entwerfen und entlang einer Prozesskette integrieren
+                \item zwei Endresultate integrieren, bspw. Krankschreibung von Krankenkasse und Arbeitgeber
+                \item[$\Rightarrow$] aufwendig! // wo wir hin wollen, sind Daten-getriebene Prozesse
+            \end{itemize}
+
+            \hrule
+
+            \begin{itemize}
+                \item sammeln zunächst Daten, welche Basis für Anwendungen bilden
+                \item bspw. benötigt Entw. einer KI zunächst breite Datengrundlage, um zu funktionieren
+                \item kann nicht erst KI entwickeln und dann Datenspeicher
+                \item Prozess dreht sich herum
+            \end{itemize}
+        }
+        %
         \only<2->{
             \begin{subfigure}{0.4\textwidth}
                 \centering
                 \includegraphics[height=5cm]{./assets/data_view.drawio.pdf}
             \end{subfigure}
         }
-        % sammeln zunächst Daten, welche Basis für Anwendungen bilden
-        % bspw. benötigt Entw. einer KI zunächst breite Datengrundlage, um zu funktionieren
-        % kann nicht erst KI entwickeln und dann Datenspeicher
-        % Prozess dreht sich herum
         \caption{Prozess- vs. Daten-Sicht}
     \end{figure}
 \end{frame}

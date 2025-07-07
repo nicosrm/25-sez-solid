@@ -9,7 +9,12 @@
                 \item \alert{bilaterale} Beziehungen, bspw. Lieferketten
                 \item tiefe Integration, automatisiertes Data Sharing
                 \item zweckgebunden, bspw. Koordinierung und Optimierung von Lieferketten
-                % Mittel zum Zweck
+                
+                \note{
+                    \begin{itemize}
+                        \item Mittel zum Zweck
+                    \end{itemize}
+                }
                 
                 \item<2-> mangelndes Vertrauen, streng formalisierte Nutzungsrichtlinien
                 \item<2-> keine Daten teilen? $\to$ Ineffizienz $\to$ Verlust
@@ -31,10 +36,15 @@
     \begin{columns}
         \begin{column}{0.6\textwidth}
             \begin{itemize}
-                % dynamisch, geteilter Zweck
                 \item Gleichgewicht zwischen erhaltenem und gegebenem Aufwand
-                \item Daten als strategische Ressource % statt Mittel zum Zweck
-                % ermöglichen neue Geschäfte und Optimierung von Prozessen
+                \item Daten als strategische Ressource
+                
+                \note{
+                    \begin{itemize}
+                        \item dynamisch, geteilter Zweck statt Mittel zum Zweck
+                        \item ermöglichen neue Geschäfte und Optimierung von Prozessen
+                    \end{itemize}
+                }
                 
                 \item<2-> Interaktion und Kooperation \alert{multilateraler} Akteure
                 \item<2-> Data User, Data Provider, Data Intermediary
@@ -92,7 +102,6 @@
             \centering
             \includegraphics[height=5cm]{./assets/central.drawio.pdf}
         \end{subfigure}
-        % Duplikat --> Inkonsistenz
         %
         \hspace{2cm}
         %
@@ -102,11 +111,28 @@
                 \includegraphics[height=5cm]{./assets/decentral.drawio.pdf}
             \end{subfigure}
         }
-        % Daten bei Nutzenden / Data Provider ---> Konsistenz
-        % Kontrolle über Zugang, nur wenn notwendig
-
+        %
         \caption{zentralisierte vs. dezentralisierte Datenspeicherung}
     \end{figure}
+
+    \note{
+        \begin{itemize}
+            \item kurzer Einschub: was heißt dezentrale Speicherung?
+        \end{itemize}
+
+        \textbf{Zentral}
+        \begin{itemize}
+            \item von vorhin bekannt
+            \item rechts dasselbe in grün, jedoch eben nicht, sondern veraltet
+            \item Duplikat $\to$ Inkonsistenz
+        \end{itemize}
+
+        \textbf{Dezentral}
+        \begin{itemize}
+            \item Daten bei Nutzenden / Data Provider $\to$ Konsistenz
+            \item Kontrolle über Zugang, nur wenn notwendig
+        \end{itemize}
+    }
 \end{frame}
 
 
@@ -122,21 +148,34 @@
                     \item[$\to$]<2-> kein einheitliches Daten"=Schema notwendig
                 \end{itemize}
                 
-                \item<3-> bilateraler Datenaustausch % vgl. IOIS
-                \item<3-> Vermittlung zwischen Data User und Provider % vgl. Data Intermediary
-                % Adapter --> reines Mapping + Weitergeben
-                % Mediator --> Kontroll-Möglichkeiten
-
-                % prinzipiell überhaupt eine Chance, dass ich an benötigte Daten komme
-                % --> Daten-Lieferketten, muss zu best. Domäne kommen
+                \item<3-> bilateraler Datenaustausch
+                \item<3-> Vermittlung zwischen Data User und Provider
                 
+                \note{
+                    \begin{itemize}
+                        \item bilat. Datenaust.: vgl. IOIS
+                        \item Vermittlung DU / DP: vgl. Data Intermediary // vgl. Adapter / Mediator
+                        \item prinzipiell überhaupt eine Chance, dass ich an benötigte Daten komme\\
+                            $\to$ Daten-Lieferketten, muss zu best. Domäne kommen
+                    \end{itemize}
+                }
+
                 \item<4-> technische Garantie von Datensouveränität
-                % -> Überwindung betriebl. Barrieren
-                % Kontrolle über Zugriff und Verwendung bei Provider
                 \item<4-> geteilter Raum für vertrauenswürdiges Data Sharing $\to$ Optimierung, Innovation
-                % flexible betriebliche Strukturen
-                % Zugang nur für bestimmte Akteure --> *Trusted Pool*
-                % sicheres, vertrauenswürdiges Data Sharing
+
+                \note{
+                    \textbf{technische Garantie von Datensouveränität}
+                    \begin{itemize}
+                        \item[$\to$] Überwindung betriebl. Barrieren // Kontrolle über Zugriff und Verwendung bei Provider
+                    \end{itemize}
+
+                    \textbf{geteilter Raum für vertr. DSh}
+                    \begin{itemize}
+                        \item flexible betriebliche Strukturen
+                        \item Zugang nur für bestimmte Akteure $\to$ \emph{Trusted Pool}
+                        \item sicheres, vertrauenswürdiges Data Sharing
+                    \end{itemize}
+                }
             \end{itemize}
         \end{column}
         
@@ -154,35 +193,56 @@
     \begin{columns}
         \begin{column}{0.6\textwidth}
             \begin{itemize}
-                % Kapselung möglich, DS ist nur weiterer Data Provider
                 \item Kapselung $\to$ Data Space als Data Provider
-                % merkt man nicht, wenn DS größer wird
+                \note{
+                    \begin{itemize}
+                        \item merkt man nicht, wenn DS größer wird
+                    \end{itemize}
+                }
                 
                 \item[$\Rightarrow$] \emph{globaler} Data Space?
                 \begin{itemize}
                     \item<2-> Domänen-spezifisch, starke Kopplungen
-                    % Datenstrukturen für spez. genau für diesen Teilbereich, aber trotzdem verknüpft
-                    % jede Domäne hat noch weitere Daten, interessiert andere Seite nicht
                 \end{itemize}
 
-                % daher
+                \note{
+                    \hrule
+                    \begin{itemize}
+                        \item Datenstrukturen für spez. genau für diesen Teilbereich, aber trotzdem verknüpft
+                        \item jede Domäne hat noch weitere Daten, interessiert andere Seite nicht
+                    \end{itemize}
+                }
+
                 \item<3-> eigene Data Spaces für Domäne
-                    % erfüllen genau diesen gemeinsamen Zweck
                 \item<3-> über Data Space hinweg: lose Kopplung
-                % bspw. komplette Medizindaten beim Arzt vs. nur relevante Daten für Studie
-                % Details sind uninteressant
+                
+                \note{
+                    \hrule
+                    \begin{itemize}
+                        \item daher DS: erfüllen genau diesen gemeinsamen Zweck
+                        \item bspw. komplette Medizindaten beim Arzt vs. nur relevante Daten für Studie
+                    \end{itemize}
+                }
 
                 \item[$\Rightarrow$]<4-> Verschachtelung / Überlappung von Data Spaces
                 \item[$\Rightarrow$]<4-> \alert{\emph{Data Ecosystem}}
-                    % um einen oder mehrere föderierte Data Spaces
-                    % technische Integration über Schnittstellen
-                    % Datensouveränität & Verhinderung großer Daten-Silos: verschachtelt && überlappend
+                
+                \note{
+                    \hrule
+                    \begin{itemize}
+                        \item DE: technische Integration über Schnittstellen
+                        \item Datensouveränität \& Verhinderung großer Daten-Silos: verschachtelt $\land$ überlappend
+                        % \item Bild: DPr. oder DS $\to$ Kapselung
+                        % \begin{itemize}
+                        %     \item orange: Verbindung DS // oben rechts: nicht DS, trotzdem Zugriff
+                        % \end{itemize}
+                    \end{itemize}
+                }
 
                     % Bild: Punkte können Data Prov. oder DS sein --> Kapselung, Verschachtelung
                     % orangene Linien: Verbindung von Data Spaces, lose Kopplung
                     % oben rechts: kein Teilnehmer aus DS von unten, aber trotzdem Zugriff auf rel. Daten
                 
-
                 % prinzipiell überhaupt eine Chance, dass ich an benötigte Daten komme
                 % --> Daten-Lieferketten, muss zu best. Domäne kommen
                 % brauche Kontrollen --> DS Connectors
@@ -195,6 +255,14 @@
                 % Erfüllung rechtlicher Rahmenbedingungen
                 % Ebene von DE, DS, Pod oder Ressourcen
                 \item<5-> Erreichen gemeinsamer Ziele
+                
+                \note{
+                    \hrule
+                    \begin{itemize}
+                        \item an Daten kommen $\to$ Daten-Lieferk., Kontrolle (med. Daten) $\to$ DSC
+                        \item Gov.-Maßn.: Kontrollen, rechtl. Bed., Ebene von DE, DS, Pod oder Ress.
+                    \end{itemize}
+                }
             \end{itemize}
         \end{column}
 

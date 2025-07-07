@@ -2,16 +2,12 @@
 
 \section{Solid}
 
-% TODO: Dreiecksbild auf meisten Folien klein in Ecke für Ref.
-
 \begin{frame}{Solid \footnotesize\cite{mecklerWebLinkedData2023}}
     \begin{columns}
         \begin{column}{0.6\textwidth}
             \begin{itemize}
-                % mögliche Implementierung des Data Space Konzeptes basiert auf Solid
                 \item Data Space Konzept basierend auf\\
                     \emph{Solid} (ehem. Social Linked Data)
-                    % TODO: Herkunft von Social Linked Data
                 \item<2-> Ziel: offene, dezentralisierte Netzwerke für souveränen Datenaustausch
                 \item<3-> Definition von Protokollen für Verwaltung und Austausch von Daten, Zugriffskontrolle und Identitätsmanagement
             \end{itemize}
@@ -24,6 +20,12 @@
             \end{figure}
         \end{column}
     \end{columns}
+
+    \note{
+        \begin{itemize}
+            \item mögliche Implementierung des Data Space Konzeptes basiert auf Solid
+        \end{itemize}
+    }
 \end{frame}
 
 
@@ -33,12 +35,16 @@
         \includegraphics[height=5cm]{./assets/solid_triangle.drawio.pdf}
         \caption{Solid-Komponenten}
     \end{figure}
-    % - Gliederung von Anwendungen in drei Teile
-    %   - Anwendung als solches // Daten // Identität
-    % - Identitätskomp.: verifiziert Identität eines Akteurs zur Auth. für Datenzugriff
-    % - Daten und zugehörige Zugriffsregeln: dezentral in einen oder mehreren *Personal Online Data Stores* (Pods) gespeichert
-    % - Anwendung verwendet ID, um korrekten Pod zu identifizieren und um sich für Datenzugriff zu auth.
-    % - anschließend kann Anw. erforderliche Daten aus Pods lesen/schreiben
+
+    \note{
+       \begin{itemize}
+        \item Gliederung von Anwendungen in drei Teile
+        \item ID-Komp.: verifiziert Identität eines Akteurs zur Auth. für Datenzugriff
+        \item Daten und zugehörige Zugriffsregeln: dezentral in einen oder mehreren Datenspeichern gespeichert
+        \item Anwendung verwendet ID, um korrekten Speicher zu identif. und um sich für Datenzugriff zu auth.
+        \item anschließend kann Anw. erforderliche Daten aus Speicher lesen/schreiben
+       \end{itemize}
+    }
 \end{frame}
 
 
@@ -58,10 +64,15 @@
         \begin{column}{0.6\textwidth}
             \begin{figure}
                 \includegraphics[width=\textwidth]{./assets/solid_triangle.drawio.pdf}
-                % an Tafel malen
             \end{figure}
         \end{column}
     \end{columns}
+
+    \note{
+        \begin{itemize}
+            \item an Tafel malen!
+        \end{itemize}
+    }
 \end{frame}
 
 
@@ -71,9 +82,13 @@
     \begin{itemize}
         \item dezentrale Speicherung in \emph{Personal Online Data Stores} (Pods)~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}
         \item Standardisierung $\to$ Interoperabilität auf Daten"= statt Anwendungsebene
-        % --> einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration
         
-        % \item Binärdaten\only<1|handout:0>{?} \only<2->{mit Metadaten}
+        \note{
+            \begin{itemize}
+                \item einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration
+            \end{itemize}
+        }
+        
         \item \only<1|handout:0>{Binärdaten?}
               \only<2>{Binärdaten mit Metadaten}
               \only<3-|handout:0>{\st{Binärdaten mit Metadaten}}
@@ -81,8 +96,13 @@
         \pause
         \pause
         \item lesbares Format \only<4->{$\to$ \emph{Resource Description Framework} (RDF) mit \emph{Vocabularies}~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}}
-        % bspw. <Tim Berners-Lee> <is a> <person> (vgl. Bizer)
-        % TODO: RDF-Erklärung höchstens kurz !!!
+        \note{
+            \hrule
+            \begin{itemize}
+                \item \texttt{<Tim Berners-Lee> <is a> <person>}
+                \item Subjekt, Prädikat, Objekt
+            \end{itemize}
+        }
         
         \pause
         \pause
@@ -136,23 +156,39 @@
         \item Anwendungen lesen und schreiben Daten direkt aus Pods
         \item Interoperabilität der Pods mit Anwendungen\\
             und wohldefiniertes, einfach implementierbares Protokoll
-            % möglichst viel wiederverwenden, was bereits vorhanden ist
-            % soll keine neue Komponenten sein --> aufbauend auf RESTful
+        
+        \note{
+            \begin{itemize}
+                \item möglichst viel wiederverwenden, was bereits vorhanden ist
+                \item soll keine neue Komponenten sein $\to$ aufbauend auf RESTful
+            \end{itemize}
+        }
+
         \item[$\Rightarrow$]<2-> RESTful"=Service, welche \emph{Linked Data Platform} (LDP) erfüllen
         \begin{itemize}
-            % LDP: beschreibt Datenformat
-            %   Einteilung in Ressourcen und Containern, Paging
             \item<2-> \texttt{HTTP GET}, \texttt{POST}, \texttt{PATCH}, \texttt{DELETE} etc.~\cite{sambraSolidPlatformDecentralized2016}
         \end{itemize}
+        
+        \note{
+            \hrule
+            \begin{itemize}
+                \item LDP: beschreibt Datenformat
+                \item Einteilung in Ressourcen und Containern, Paging
+            \end{itemize}
+        }
 
         \item<3-> komplizierte Datenabfragen mittels SPARQL (optional)
     \end{itemize}
-\end{frame}
 
-% Fazit
-% Datenmanagement betrachtet
-% dezentrale Speicherung, Interoperabilität auf Daten- statt Anw.-Ebene
-% Wie identifizieren wir Datenspeicher und Akteure für Datenzugriff? 
+    \note{
+        \hrule\vspace{1mm}\hrule
+        \begin{itemize}
+            \item Fazit: Datenmanagement betrachtet
+            \item dezentrale Speicherung, Interoperabilität auf Daten- statt Anw.-Ebene
+            \item Wie identifizieren wir Datenspeicher und Akteure für Datenzugriff? 
+        \end{itemize}
+    }
+\end{frame}
 
 % \begin{frame}{Datenabfragen \footnotesize\cite{sambraSolidPlatformDecentralized2016}}
 %     \begin{itemize}
@@ -199,8 +235,13 @@
                 \begin{itemize}
                     \item<2-> Referenz auf Pod und Anwendungsdaten~\cite{solidcommunitygroupSolidWebIDProfile2024}
                     \item<2-> Referenz auf weitere Profildaten~\cite{solidcommunitygroupSolidWebIDProfile2024}
-                    % Webseite im RDF"=Format, global eindeutige URI~\cite{sambraSolidPlatformDecentralized2016}
                 \end{itemize}
+
+                \note{
+                    \begin{itemize}
+                        \item Webseite im RDF"=Format, global eindeutige URI~\cite{sambraSolidPlatformDecentralized2016}
+                    \end{itemize}
+                }
                 
                 \item<3-> Speicherung bei Identity Provider\\
                     (meist Pod Provider)~\cite{sambraSolidPlatformDecentralized2016}
@@ -226,18 +267,33 @@
         \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item Verknüpfung von Identitäten über mehrere Seiten\\
-                $\Rightarrow$ \emph{Web of Trust}
-                % hilfreich, da man nicht alle Akteure in einem DS / DE kennen kann
+                    $\Rightarrow$ \emph{Web of Trust}
+                \note{
+                    \begin{itemize}
+                        \item hilfreich, da man nicht alle Akteure in einem DS / DE kennen kann
+                    \end{itemize}
+                }
                 
                 \item[$\Rightarrow$]<2-> ad-hoc Auth.-Entscheidungen basierend auf Profileigenschaften
-                % bspw. Beziehungen zu anderen Akteuren, Arbeitsstelle, Teil einer Gruppe etc. etc.
-                % transitives Vertrauen
+                \note{
+                    \hrule
+                    \begin{itemize}
+                        \item bspw. Beziehungen zu anderen Akteuren, Arbeitsstelle, Teil einer Gruppe etc. etc.
+                        \item transitives Vertrauen
+                    \end{itemize}
+                }
                 
                 \item[$\Rightarrow$]<3-> Wem kann ich vertrauen?\\ Kann ich den geteilten Daten vertrauen?
                 
                 \item[$\Rightarrow$]<4-> Adressierung eines Kern"=Hindernisses
             \end{itemize}
-            % aber wenn ein Akteur kompromittiert, dann SCHLECHT
+
+            \note{
+                \hrule
+                \begin{itemize}
+                    \item aber wenn ein Akteur kompromittiert, dann SCHLECHT
+                \end{itemize}
+            }
         \end{column}
         
         \begin{column}{0.4\textwidth}
@@ -282,14 +338,27 @@
     \begin{itemize}
         \item Einführung zusätzlicher Metadaten
         \begin{itemize}
-            \item \emph{Data Processing Purpose} $P$ % Weitergabe muss sich trotzdem an ursprüngl. Zweck halte
+            \item \emph{Data Processing Purpose} $P$
+            
+            \note{
+                \begin{itemize}
+                    \item Weitergabe muss sich trotzdem an ursprüngl. Zweck halte
+                \end{itemize}
+            }
+
             \item Verstecken der Datenquelle, Angabe über Weitergabe
         \end{itemize}
 
         \item<2-> weitere Validierung notwendig
-        % weiterer Schritt in Richtung E2E-B2B-Wertschöpfungsketten
-        % Möglichkeit und Notwendigkeit zur Erweiterung von Solid
     \end{itemize}
+
+    \note{
+        \hrule
+        \begin{itemize}
+            \item weiterer Schritt in Richtung E2E-B2B-Wertschöpfungsketten
+            \item Möglichkeit und Notwendigkeit zur Erweiterung von Solid
+        \end{itemize}
+    }
 
     % TODO: Stichpunkte zum Erzählen
 \end{frame}
