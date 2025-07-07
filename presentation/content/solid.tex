@@ -21,8 +21,6 @@
             \begin{figure}
                 \includegraphics[width=0.5\textwidth]{./assets/solid_logo.pdf}
                 \caption{Solid-Logo~\cite{solidcommunitygroupSolidemblemsvg2019}}
-                % TODO: Anw. <-> Daten // Lücke ID <-> Anw.
-                % "identifiziert" --> "Identifizierung"
             \end{figure}
         \end{column}
     \end{columns}
@@ -75,8 +73,10 @@
         \item Standardisierung $\to$ Interoperabilität auf Daten"= statt Anwendungsebene
         % --> einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration
         
-        \item Binärdaten\only<1|handout:0>{?} \only<2->{mit Metadaten}
-        % TODO: Durchstreichen
+        % \item Binärdaten\only<1|handout:0>{?} \only<2->{mit Metadaten}
+        \item \only<1|handout:0>{Binärdaten?}
+              \only<2>{Binärdaten mit Metadaten}
+              \only<3-|handout:0>{\st{Binärdaten mit Metadaten}}
         
         \pause
         \pause
@@ -92,6 +92,7 @@
         \item global eindeutige Identifikation via \emph{Uniform Resource Identifier} (URI)~\cite{sambraSolidPlatformDecentralized2016}
         \begin{itemize}
             \item \texttt{https://www.w3.org/People/Berners-Lee/card\#i}~\cite{bizerLinkedDataStory2009}
+            % TODO: Unterschied URL / URI
         \end{itemize}
         
         \pause
@@ -213,7 +214,6 @@
                     \centering
                     \includegraphics[height=5.5cm]{./assets/profile.drawio.pdf}
                     \caption{Solid Profil~\cite[vgl.][]{sambraSolidPlatformDecentralized2016,solidcommunitygroupSolidWebIDProfile2024}}
-                    % TODO: WebID URI Rand kleiner
                 \end{figure}
             }
         \end{column}

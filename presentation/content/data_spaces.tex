@@ -123,15 +123,6 @@
 \end{frame}
 
 
-% \begin{frame}{Data Spaces IV \footnotesize\cite{mollerIndustrialDataEcosystems2024}}
-%     \begin{itemize}
-%         \item flexible betriebliche Strukturen
-%         \item Zugang nur für bestimmte Akteure $\to$ \emph{Trusted Pool}
-%         \item sicheres, vertrauenswürdiges Data Sharing
-%     \end{itemize}
-% \end{frame}
-
-
 \begin{frame}{Data Ecosystems \footnotesize\cite{mollerIndustrialDataEcosystems2024}}
     \begin{columns}
         \begin{column}{0.6\textwidth}
@@ -151,8 +142,7 @@
                 \item<3-> eigene Data Spaces für Domäne
                     % erfüllen genau diesen gemeinsamen Zweck
                 \item<3-> über Data Space hinweg: lose Kopplung
-                % bspw. Produkte oder Krankheitsstatus für Arzt <-> AG
-                % TODO: Eingangbeispiel verwenden
+                % bspw. komplette Medizindaten beim Arzt vs. nur relevante Daten für Studie
                 % Details sind uninteressant
 
                 \item[$\Rightarrow$]<4-> Verschachtelung / Überlappung von Data Spaces
@@ -160,6 +150,10 @@
                     % um einen oder mehrere föderierte Data Spaces
                     % technische Integration über Schnittstellen
                     % Datensouveränität & Verhinderung großer Daten-Silos: verschachtelt && überlappend
+
+                    % Bild: Punkte können Data Prov. oder DS sein --> Kapselung, Verschachtelung
+                    % orangene Linien: Verbindung von Data Spaces, lose Kopplung
+                    % oben rechts: kein Teilnehmer aus DS von unten, aber trotzdem Zugriff auf rel. Daten
                 
 
                 % prinzipiell überhaupt eine Chance, dass ich an benötigte Daten komme
@@ -168,7 +162,8 @@
                 \item<5-> Integration über \emph{Data Space Connector}
                 % vgl. Adapter (nur Weitergabe) oder Mediator (inkl. Kontrollmechanismen)
                 % Kontrolle notwendig --> DS Connectors
-                % TODO: Beispiel
+                % bspw. Weitergabe von med. Daten an Forschungsinstitut
+                %   muss anonymisiert erfolgen, nur best. Daten dürfen weitergegeben werden
                 \item<5-> Governance"=Maßnahmen je Abstraktionsebene
                 % Erfüllung rechtlicher Rahmenbedingungen
                 % Ebene von DE, DS, Pod oder Ressourcen
@@ -180,7 +175,6 @@
             \only<4->{
                 \begin{figure}
                     \includegraphics[height=5cm]{./assets/data_ecosystem_architecture.drawio.pdf}
-                    % TODO: blaue Linien deutlicher
                     \vspace{-1em}
                     \caption{Data Ecosystem}
                 \end{figure}
@@ -191,31 +185,3 @@
     % Data Spaces erfüllen am meisten Kriterien
     % Wie kann das funktionieren? --> Solid
 \end{frame}
-
-
-% \begin{frame}{Data Spaces IV \footnotesize\cite{mollerIndustrialDataEcosystems2024}}
-%     % prinzipiell überhaupt eine Chance, dass ich an benötigte Daten komme
-%     % --> Daten-Lieferketten, muss zu best. Domäne kommen
-%     % brauche Kontrollen --> DS Connectors
-%     % Beispiel heraussuchen
-
-%     \begin{itemize}
-%         \item flexible betriebliche Strukturen
-%         \item Zugang nur für bestimmte Akteure $\to$ \emph{Trusted Pool}
-%         \item sicheres, vertrauenswürdiges Data Sharing
-        
-%         \pause
-%         \item Einbettung in Data Ecosystem
-%         \item \emph{Data Space Member} vs. \emph{Data Ecosystem Party}
-%         % DSM: direkt technisch in DS eingebunden
-%         % DEP: nur indirekter Zugriff über Data Space Connector (Schnittstelle zu DSM)
-        
-%         \pause
-%         \item Governance"=Maßnahmen auf allen Abstraktionsebenen
-%         % Erfüllung rechtlicher Rahmenbedingungen
-%         % Ebene von DE, DS oder Use Case
-%     \end{itemize}
-    
-%     % Data Spaces erfüllen am meisten Kriterien
-%     % Wie kann das funktionieren? --> Solid
-% \end{frame}
