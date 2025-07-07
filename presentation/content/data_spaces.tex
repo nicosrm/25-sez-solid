@@ -62,6 +62,61 @@
                 \item Vereinen von IOIS und Data Intermediaries
                 \item dezentrale Speicherung von Daten bei Provider
                 
+                \item<0|handout:0> Datenintegration auf semantische Ebene
+                \begin{itemize}
+                    \item[$\to$]<0|handout:0> kein einheitliches Daten"=Schema notwendig
+                \end{itemize}
+                \item<0|handout:0> bilateraler Datenaustausch
+                \item<0|handout:0> Vermittlung zwischen Data User und Provider
+                \item<0|handout:0> technische Garantie von Datensouveränität
+                \item<0|handout:0> geteilter Raum für vertrauenswürdiges Data Sharing $\to$ Optimierung, Innovation
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \includegraphics[height=0.5\textheight]{./assets/data_space_architecture.drawio.pdf}
+                \caption{Data Space Architektur}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}[c]{Einschub: Zentrale vs. Dezentrale Datenspeicherung}
+    \vspace{1.5em}
+
+    \begin{figure}
+        \centering
+        \begin{subfigure}{0.4\textwidth}
+            \centering
+            \includegraphics[height=5cm]{./assets/central.drawio.pdf}
+        \end{subfigure}
+        % Duplikat --> Inkonsistenz
+        %
+        \hspace{2cm}
+        %
+        \only<2->{
+            \begin{subfigure}{0.4\textwidth}
+                \centering
+                \includegraphics[height=5cm]{./assets/decentral.drawio.pdf}
+            \end{subfigure}
+        }
+        % Daten bei Nutzenden / Data Provider ---> Konsistenz
+        % Kontrolle über Zugang, nur wenn notwendig
+
+        \caption{zentralisierte vs. dezentralisierte Datenspeicherung}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Data Spaces \footnotesize\cite{mollerIndustrialDataEcosystems2024}}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Vereinen von IOIS und Data Intermediaries
+                \item dezentrale Speicherung von Daten bei Provider
+                
                 \item<2-> Datenintegration auf semantische Ebene
                 \begin{itemize}
                     \item[$\to$]<2-> kein einheitliches Daten"=Schema notwendig
@@ -92,34 +147,6 @@
             \end{figure}
         \end{column}
     \end{columns}
-\end{frame}
-
-
-% TODO: Folie nach oben zu "dezentrale Speicherung" schieben
-\begin{frame}[c]{Zentral vs. Dezentral}
-    \vspace{1.5em}
-
-    \begin{figure}
-        \centering
-        \begin{subfigure}{0.4\textwidth}
-            \centering
-            \includegraphics[height=5cm]{./assets/central.drawio.pdf}
-        \end{subfigure}
-        % Duplikat --> Inkonsistenz
-        %
-        \hspace{2cm}
-        %
-        \only<2->{
-            \begin{subfigure}{0.4\textwidth}
-                \centering
-                \includegraphics[height=5cm]{./assets/decentral.drawio.pdf}
-            \end{subfigure}
-        }
-        % Daten bei Nutzenden / Data Provider ---> Konsistenz
-        % Kontrolle über Zugang, nur wenn notwendig
-
-        \caption{zentralisierte vs. dezentralisierte Datenspeicherung}
-    \end{figure}
 \end{frame}
 
 
