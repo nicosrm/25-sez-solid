@@ -1,16 +1,9 @@
 % !TeX root = ../handout.tex
 
-\section{Social Linked Data}
+\section{Solid}
 
-Eine mögliche Implementierung des Data Space Konzepts basiert auf \emph{Social Linked Data} (Solid), welches das Ziel verfolgt, ein Fundament für offene, dezentralisierte Netzwerke für einen souveränen Datenaustausch zu schaffen.
+Eine mögliche Implementierung des Data Space Konzepts basiert auf Solid (ehem. \emph{Social Linked Data}), welches das Ziel verfolgt, ein Fundament für offene, dezentralisierte Netzwerke für einen souveränen Datenaustausch zu schaffen.
 Solid definiert dazu Protokolle für die Verwaltung und den Austausch von Daten in einer dezentralisierten Umgebung, welche auf W3C"=Empfehlungen basiert~\cite{mecklerWebLinkedData2023}.
-
-% Im folgenden Abschnitt wird ein Solid getriebenes Data Space Konzept sowie Solid"=Anwendungen erläutert.
-% Darauf aufbauend werden die Konzepte der Identität und Authentifizierung sowie das Datenmanagement und der Datenaustausch in Solid betrachtet.
-% Abschließend wird eine Erweiterung von Solid vorgestellt, welche die Ermöglichung von B2B"=Datenwertschöpfungsketten zum Ziel hat.
-
-
-% \subsection{Solid Data Spaces}
 
 % Solid Data Spaces
 Solid Data Spaces verwenden die Web"=Architektur in Kombination mit Solid zur Bildung von Data Spaces.
@@ -18,16 +11,16 @@ Dabei werden existierende Web"=Technologien erweitert, um eine Umgebung für sic
 Dafür werden Anwendungen in drei Teile gegliedert: die (1) Anwendung als solches, (2) Daten und (3) Identität (vgl. \autoref{fig:solid-components}).
 
 % Komponenten
-Die Identitätskomponente (3) verifiziert die Identität eines Akteurs zur Authentifizierung zum Datenzugriff.
-Die Daten und zugehörigen Zugriffsregeln (2) werden dezentral in einem oder mehreren sog. \emph{Personal Online Data Stores} (Pods) gespeichert.
-Eine Anwendung (1) verwendet (3), um den korrekten Pods zu identifizieren und sich für den Datenzugriff zu authentifizieren.
+Die Identitätskomponente verifiziert die Identität eines Akteurs zur Authentifizierung zum Datenzugriff.
+Die Daten und zugehörigen Zugriffsregeln werden dezentral in einem oder mehreren Datenspeichern gespeichert.
+Eine Anwendung verwendet (3), um den korrekten Datenspeicher zu identifizieren und sich für den Datenzugriff zu authentifizieren.
 Nach erfolgreicher Authentifizierung, kann eine Anwendung die erforderlichen Daten aus den Pods lesen und schreiben.
-Solid definiert dabei den \emph{Access"=Layer}, d.h. die Protokolle zur Verwaltung von Daten und Identitäten sowie die Zugriffskontrolle.
+Solid definiert dabei die Protokolle zur Verwaltung von Daten und Identitäten sowie die Zugriffskontrolle.
 Durch die Trennung, Standardisierung und somit Austauschbarkeit der einzelnen Komponenten ist eine Schritt"=für"=Schritt"=Einführung möglich, wodurch die Einstiegsbarriere gering gehalten und dadurch die Zugänglichkeit erhöht werden kann~\cite{mecklerWebLinkedData2023}.
 
 \begin{figure}[b]
     \includegraphics[width=0.7\textwidth]{./assets/solid_triangle.drawio.pdf}
-    \caption{Komponenten von Solid}
+    \caption{Solid-Komponenten: Anwendung, Identität und Daten}
     \label{fig:solid-components}
 \end{figure}
 
@@ -42,13 +35,12 @@ Da Binärdateien schlecht maschinell lesbar und somit schlecht automatisiert ver
 Ein lesbares Format für Mensch und Maschine ist jedoch anzustreben, um eine höhere Effizienz durch Automatisierung zu ermöglichen.
 Dafür wird das \emph{Resource Description Framework} (RDF) in Kombination mit \emph{Vocabularies} verwendet.
 Durch eine Verknüpfung nach dem \emph{Linked Data} Ansatz entstehen strukturierte Daten mit einer automatisierbaren Semantik, welche mit verwandten Ressourcen vernetzt sind~\cite{bizerLinkedDataStory2009,mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
-% TODO: Mesh-Gedanke
 Andere Datenstrukturen können mittels Mapping zu RDF oder als Binärdateien mit zusätzlichen Metadaten zur Speicherung der Semantik in Pods integriert werden~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
 
 Die Daten werden in Form von \emph{LDP"=Containern} gespeichert.
 Diese sind an sich selbst ein RDF"=Graph, wodurch eine Hierarchie durch Verschachtelung möglich ist (vgl. Verzeichnisstruktur).
-Auf jeder Ebene der Hierarchie kann eine Zugriffskontrolle über \emph{Access Control List} (ACL) Ressourcen definiert werden.
-Es können unterschiedliche Rechte pro Akteur sowie pro Ressource bzw. Container eingerichtet werden, wodurch feingranularer Datenschutz gewährleistet werden kann~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
+Auf jeder Ebene der Hierarchie kann eine Zugriffskontrolle über \emph{Access Control List} (ACL) für Ressourcen definiert werden.
+Es können unterschiedliche Rechte pro Akteur sowie pro Ressource bzw. Container eingerichtet werden, wodurch ein feingranularer Datenschutz gewährleistet werden kann~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
 
 % Lesen und Schreiben
 Solid"=Anwendungen lesen und schreiben Daten direkt von und in den Pods.
@@ -69,7 +61,7 @@ Die tatsächliche Verteilung muss dabei nicht bekannt sein~\cite{sambraSolidPlat
 
 Um Vertrauen, Datensouveränität und Datenschutz zu gewährleisten ist eine Authentifizierung von Akteuren notwendig.
 Zum Erreichen einer Dezentralisierung ist ein globaler \emph{Identity Space} notwendig, welcher zur RDF"=basierten Daten in den Pods sowie der gewünschten Erweiterbarkeit passt und relevante Links zu den Datenspeichern liefert.
-\emph{WebID} erfüllt die genannten Kriterien und wird daher in Solid verwendet~\cite{sambraSolidPlatformDecentralized2016}.
+\emph{WebID} erfüllt die genannten Kriterien und wird daher in Solid verwendet~\cite{sambraSolidPlatformDecentralized2016}, kann später jedoch durch \enquote{bessere} Protokolle ersetzt werden.
 
 Akteure besitzen eine WebID"=URI, welche ein \emph{WebID Profile Document} referenziert.
 Dieses enthält wiederum Referenzen auf den Pod und die Anwendungsdaten sowie weitere Dokumente, um das Profil zu beschreiben~\cite{solidcommunitygroupSolidWebIDProfile2024}.
@@ -85,21 +77,21 @@ Auf dieser Basis kann entschieden werden, wem vertraut werden kann, mit wem ein 
 Somit wird ein großes Hindernis des Data Sharings direkt adressiert.
 
 
-\subsection{Erweiterung: B2B-Wertschöpfungsketten}
+\subsection{Erweiterung: Wertschöpfungsketten}
 
 Eine automatisierte Datenübertragung ist essenziell für Partner in einer Wertschöpfungskette, ist jedoch an weitere Anforderungen geknüpft.
 So müssen bspw. rechtliche Rahmenbedingungen garantiert und nachvollziehbar eingehalten werden.
 Solid bietet dafür bereits eine Grundlage, ist aber noch nicht ausreichend.
 Weitere Metadaten sind notwendig, um \emph{Constraints} für das Data Sharing zu etablieren~\cite{bothSolidBasedB2BData2025}.
 
-Zum einen kann über Metadaten ein \emph{Data Processing Purpose} angegeben werden, welche die minimal möglichen und notwendigen Rechte beschreibt.
+Zum einen kann über Metadaten ein \emph{Data Processing Purpose} $P$ angegeben werden, welche die minimal möglichen und notwendigen Rechte beschreibt.
 Die Weitergabe von Daten soll nur unter mindestens genauso starken Restriktionen erlaubt sein.
 Dafür führt \cite{bothSolidBasedB2BData2025} eine Purpose"=Klassen ein, welche weitergegeben werden muss~\cite{bothSolidBasedB2BData2025}.
 
 Andererseits soll die ursprüngliche Quelle bei der Weitergabe von Daten versteckt werden.
 Um eine spätere Nachvollziehbarkeit zu garantieren, soll jedoch angegeben werden, dass die Zugriffsrechte und weitergegebenen Daten auf einer Freigabe durch eine Drittpartei basiert.
-Dies wird durch eine \emph{Facade}"=Klasse umgesetzt, welche den ursprünglichen Data Provider versteckt~\cite{bothSolidBasedB2BData2025}.
+Dies wird durch eine \emph{Facade}"=Klasse umgesetzt, welche den ursprünglichen Data Provider versteckt~\cite{bothSolidBasedB2BData2025}. Ein Beispiel ist in \autoref{fig:example-data-donation} dargestellt.
 
-Diese Erweiterung zeigt die Möglichkeiten und Notwendigkeiten der Erweiterbarkeit von Solid.
-Sie dient als weiterer Schritt in Richtung E2E"=B2B"=Wertschöpfungsketten unter der Berücksichtigung des Schutzes von Daten und Geschäftsgeheimnissen.
+Diese Erweiterung zeigt die Möglichkeiten und Notwendigkeit der Erweiterbarkeit von Solid.
+Sie dient als weiterer Schritt in Richtung Wertschöpfungsketten unter der Berücksichtigung des Schutzes von Daten und Geschäftsgeheimnissen.
 Allerdings ist weitere Forschung notwendig, um die verwendete Purpose"=Ontologie zu validieren, um vollständig automatisierbare Prozesse zu etablieren~\cite{bothSolidBasedB2BData2025}.

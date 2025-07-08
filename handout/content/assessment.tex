@@ -2,49 +2,19 @@
 
 \section{Einschätzung und Zukunft}
 
-\iffalse
-- Einhaltung rechtlicher Rahmenbedingungen?
-    - Paper von Both --> weitere Metadaten für Zweck, Constraints bei Datenweitergabe
-    - B2B Data Sharing und Weitergabe mit Datensouveränität
-- ad-hoc Zusammenschaltung von GP
-    - Erzeugung eines Web of Trust --> ad-hoc Entscheidungen, Vertrauen in Wahrheitsgehalt
-    - Verwendung von RDF + Linked Data --> Automatisierung, Interoperabilität
-    - Datenaustausch durch Authentifizierung mittels WebID
-- Interop. + Datensouveränität + Auslagerung von Standardfkt. + Automatisierung
-    - Kostensenkung, Steigerung der Wirtschaftlichkeit
-    ==> niederigere Entstiegsbarriere für neue Mark-TN
-    ==> höherer Wettbewerb durch mehr Konkurrenz
-\fi
-
-
-% Solid speichert Daten dezentral in Pods, wobei eine Zugriffskontrolle durch Nutzende vorgesehen ist.
-% Dies ist eine deutliche Verbesserung zum aktuellen, zentralen Ansatz, in dem Daten bei Unternehmen gespeichert werden, ohne weitgehende Möglichkeiten für Nutzende zur Einschränkung des Datenzugriffs oder Datenschutzes.
-% Zusammen mit der Interoperabilität auf Daten"= statt auf Anwendungsebene, besteht eine erhöhte Wahrscheinlichkeit, dass Akteure mehr und diversere Daten speichern, wodurch eine höhere Verfügbarkeit von aktuellen Daten ermöglicht wird.
-% Allerdings muss zukünftig erforscht werden, wie verhindert werden kann, dass die Daten nicht durch Data User zwischengespeichert werden.
-% Dies könnte wiederum zur Entstehung von Datensilos sowie unberechtigter Datenweitergabe führen.
-
-% Damit Akteure von den Vorteilen profitieren können, die Data Spaces ermöglichen, müssen diese ihre Digitalisierung vorantreiben.
-% Da die Daten in Solid in einer automatisierbaren, semantischen Struktur vorliegen, können günstigere Mapping"=Prozesse die bisherigen teuren Integrationsansätze mittels ETL ersetzen.
-% Die Daten bleiben dabei dezentral bei den Eigentümern, welche durch Linked Data verknüpft werden.
-% Somit können bisherige \emph{Data Lakes} durch ein \emph{Data Mesh} ersetzt werden.
-% Zukünftig ist es denkbar, dass das Software Engineering somit sich von ETL- zu Mapping"=Prozessen bewegt, wobei wiederverwendbare Schnittstellen zu implementieren sind.
-% Außerdem sind die Daten nicht mehr an die Branchen gebunden.
-% Dies führt in die Richtung einer abstrakten, agnostischen Metaprogrammierung, bei der Daten dynamisch basierend auf der Semantik über RDF interpretiert werden.
-
-% Weiterhin sieht Solid bereits die Möglichkeit zur nachvollziehbaren Einhaltung rechtlicher Rahmenbedingungen vor.
-% Die Erweiterung von \cite{bothSolidBasedB2BData2025} zeigt, dass dies möglich ist, jedoch noch weitere Forschung bedarf.
-% Auch hier ist eine Verbesserung zum aktuellen, zentralisierten Ansatz zu erkennen. % TODO: is it?
-
 Die Verwendung von Solid bringt viele Ziele zusammen, um die einleitend genannte Vision näher in die Realität zu bringen.
-So existiert ein Ansatz zur Gewährleistung von Datensouveränität und Datenschutz, auch wenn noch Konzepte notwendig sind, welche die Bildung großer Datensilos verhindern.
-Mittels Web of Trust können Authentifizierungsentscheidungen basierend auf dem Netzwerk von Akteuren schnell und effizient getroffen werden und darauf aufbauend vertrauenswürdig Daten geteilt werden.
-Durch die Standardisierung, Interoperabilität und Wiederverwendbarkeit werden Anwendungen und Daten entkoppelt, wodurch Anwendungen ohne aufwendige Datenmigration gewechselt werden können.
+So existiert ein Ansatz zur Gewährleistung von Datensouveränität und Datenschutz, auch wenn noch Konzepte notwendig sind, welche die Zwischenspeicherung durch Data User und somit die Bildung großer Datensilos verhindern.
+Mittels Web of Trust können Authentifizierungsentscheidungen schnell und effizient getroffen werden, wodurch vertrauenswürdig Daten geteilt werden können.
+Jedoch sind Ansätze gegen Kompromittierung notwendig.
+
+Durch Standardisierung, Interoperabilität und Wiederverwendbarkeit werden Anwendungen und Daten entkoppelt, wodurch ein Wechsel ohne aufwendige Migrationen ermöglicht wird.
 Gekoppelt mit der Auslagerung von Standardfunktionalitäten können Entwicklungskosten und somit Einstiegsbarrieren für neue Unternehmen gesenkt werden.
-Dadurch ist mehr Wettbewerb und somit Innovation auf dem Markt möglich.
+Dadurch ist mehr Wettbewerb und Innovation möglich.
 
-Insgesamt werden ad-hoc Daten"= und Anwendungsintegrationen ermöglicht, wofür statt aufwendigen ETL"=Prozessen nur noch Schnittstellen für das Mapping der Daten vorgenommen werden muss.
+Insgesamt ist das Ziel, ad-hoc Daten"= und Anwendungsintegrationen zu ermöglichen, wofür statt aufwendigen ETL"=Prozessen nur ein Mapping der Datenstrukturen vorgenommen werden muss.
 Daten können von Branchen abstrahiert werden, da eine dynamische Interpretation durch die Semantik aus den RDF"=Daten möglich ist, was in Richtung Metaprogrammierung führen könnte.
+Allerdings müssen die Daten vorher in entsprechenden, digitalen Formaten vorliegen.
 
-Da die Datenstrukturen nicht mehr von den Anwendungen abhängig sind, wird eine andere Art und Weise der Unterscheidung auf dem Markt notwendig sein, da Unternehmen ihre Kund:innen nicht mehr alleine durch proprietäre Datenformate halten können.
-Eine Zentrierung um die Bedürfnisse und Wünsche der Nutzer:innen sowie der Anspruch an Qualität könnte zunehmen, da Nutzende sonst einfach zu anderen Alternativen wechseln könnten.
+Da die Datenstrukturen nicht mehr von den Anwendungen abhängig sind, wird eine andere Art und Weise der Unterscheidung auf dem Markt notwendig sein, da Unternehmen ihre Kund:innen nicht mehr durch proprietäre Datenformate halten können.
+Eine Nutzerzentrierung sowie der Qualitätsanspruch könnten zunehmen, da Nutzende sonst einfach zu anderen Alternativen wechseln könnten.
 Durch eine niedrigere Einstiegshürde in den Markt würde dies begünstigt werden.

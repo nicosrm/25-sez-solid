@@ -3,6 +3,8 @@ acmguide.pdf
 handout/handout.pdf
 presentation/presentation.pdf
 notes/*
+shared/assets/*.png
+shared/assets/*.pdf
 
 # LaTeX
 ## Core latex/pdflatex auxiliary files:
