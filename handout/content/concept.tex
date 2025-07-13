@@ -4,11 +4,11 @@
 
 % Lieferketten -- IOIS
 Daten sind für nahezu alle Geschäftsprozesse notwendig, wie bspw. der Koordinierung und Optimierung von Lieferketten.
-\emph{Inter-Organisational Information Systems} (IOIS) (vgl. \autoref{fig:data-sharing-iois-di-ds}) beschreiben bilaterale Beziehungen, wie bspw. Lieferketten, bei denen individuelle Systeme für eine tiefe Integration und automatisiertem Data Sharing verbunden werden.
+\emph{Inter-Organisational Information Systems} (IOIS) (vgl. \autoref{fig:data-sharing-iois-di-ds}) beschreiben bilaterale Beziehungen, wie bspw. Lieferketten, bei denen individuelle Systeme tief integriert sind, um automatisiertes Data Sharing zu ermöglichen.
 Dabei werden Daten für einen bestimmten Zweck geteilt, wie bspw. dem Entgegenwirken schädlicher Effekte in Lieferketten und der Steigerung von Effizienz.
 Aufgrund von mangelndem Vertrauen besteht die Angst vor Datenmissbrauch oder unberechtigter Weitergabe von Daten, wie bspw. Betriebsgeheimnissen, weshalb aufwendig zu verhandelnde, streng formalisierte Nutzungsrichtlinien notwendig sind.
-Keine Daten zu teilen würde jedoch zu ineffizienten Lieferketten und somit wirtschaftlichem Verlust führen, was keine Option für Unternehmen ist.
-Eine Skalierung solcher Beziehungen bringt Herausforderungen mit sich, wie bspw. Kontrollverlust oder unberechtigte Datenweitergabe~\cite{mollerIndustrialDataEcosystems2024}.
+Keine Daten zu teilen würde jedoch zu ineffizienten Lieferketten und somit wirtschaftlichem Verlust führen, was keine Option für Unternehmen darstellt.
+Eine Skalierung solcher Beziehungen ist jedoch mit Herausforderungen verbunden, wie bspw. Kontrollverlust oder unberechtigte Datenweitergabe~\cite{mollerIndustrialDataEcosystems2024}.
 
 \begin{figure}
     \includegraphics[width=\textwidth]{./assets/data_sharing_architectures.drawio.pdf}
@@ -23,18 +23,18 @@ Daten sind somit nicht mehr nur Mittel zum Zweck, sondern eine strategische Ress
 Dies geschieht durch \emph{multilaterale} Akteure, welche miteinander interagieren und kooperieren.
 Jeder Akteur kann dabei zum Data Sharing beitragen, in dem Daten verwendet (\emph{Data User}) oder bereitgestellt (\emph{Data Provider}) werden.
 \emph{Data Intermediaries} agieren als zentraler Akteur, welche zwischen Data User und Provider vermitteln können, wodurch ein  multilaterales Netzwerk für einen offenen und dynamischen Datenaustausch geschaffen werden kann.
-Sie aggregieren, verarbeiten und verteilen relevante Daten, um deren Wert zu maximieren.
+Sie aggregieren, verarbeiten und verteilen relevante Daten, um deren Wert zu maximieren (vgl. Adapter, Mediator).
 Dadurch können Netzwerkeffekte entstehen und Innovation gefördert werden~\cite{mollerIndustrialDataEcosystems2024}.
 
 % Data Spaces
 \emph{Data Spaces} vereinen die Konzepte von IOIS und Data Intermediaries (vgl. \autoref{fig:data-sharing-iois-di-ds}).
-Daten werden dezentrale bei den Data Providern gespeichert (vgl. \autoref{fig:central-vs-decentral}). % werden \emph{Data Space Connectors}.
+Daten werden dezentral bei den Data Providern gespeichert (vgl. \autoref{fig:central-vs-decentral}).
 Akteure eines Data Spaces können bilaterales Data Sharing (vgl. IOIS) betreiben.
 Ähnlich wie Data Intermediaries bringen Data Spaces verschiedene Data Provider und User zusammen, um Netzwerkeffekte zu schaffen.
 Die Kontrolle über den Zugriff und Verwendung von Daten liegt stets beim jeweiligen Data Provider.
 Betriebliche Barrieren werden überwunden, in dem Datensouveränität technisch garantiert wird.
 Der Zugang kann auf bestimmte Akteure beschränkt werden, sodass ein \emph{Trusted Pool} an Akteuren entsteht.
-Dadurch wird ein geteilter Raum für Akteure geschaffen, in dem ein vertrauenswürdiger Datenaustausch statt finden kann, wodurch zwischenbetriebliche Optimierung und Innovation gefördert werden kann~\cite{mollerIndustrialDataEcosystems2024}.
+Dadurch wird ein geteilter Raum für Akteure geschaffen, in dem ein vertrauenswürdiger Datenaustausch stattfinden kann, wodurch zwischenbetriebliche Optimierung und Innovation gefördert wird~\cite{mollerIndustrialDataEcosystems2024}.
 
 \begin{figure}[b]
     \includegraphics[width=0.7\textwidth]{./assets/central_vs_decentral.drawio.pdf}
@@ -44,11 +44,11 @@ Dadurch wird ein geteilter Raum für Akteure geschaffen, in dem ein vertrauensw�
 
 % Eigenschaften von DS
 Data Spaces sind verteilt \emph{by Design} wodurch keine physikalische Datenintegration notwendig ist.
-Die Daten bleiben bei der Quelle (Data Provider), wobei der Zugang nur gewährt wird, wenn dieser notwendig ist.
-Außerdem ist kein einheitliches Daten"=Schema notwendig, da die Datenintegration auf semantischer Ebene, bspw. durch \emph{Vocabularies} stattfindet.
-Weiterhin können Data Spaces verschachtelt oder überlappend sein, in dem Data Provider oder User mitglieder verschiedener Data Spaces sind.
-Somit können \emph{Data Ecosystems} um einen oder mehrere föderierte Data Spaces entstehen, welche über Schnittstellen (\emph{Data Space Connectors}) (DSC) technisch integriert werden, wodurch gemeinsame Ziele der Akteure realisiert werden können.
-Um große Daten"=Silos zu verhindern, sind überlappende Data Ecosystems mit verbunden Data Spaces anzustreben (vgl. \autoref{fig:data-sharing-iois-di-ds}).
+Daten bleiben bei der Quelle (Data Provider), wobei der Zugang nur nach erfolgreicher Verhandlung gewährt wird.
+Außerdem ist kein einheitliches Datenschema notwendig, da die Datenintegration auf semantischer Ebene, bspw. durch \emph{Vocabularies} stattfindet.
+Weiterhin können Data Spaces verschachtelt oder überlappend sein, in dem Data Provider oder User Mitglieder verschiedener Data Spaces sind.
+Somit können \emph{Data Ecosystems} um einen oder mehrere föderierte Data Spaces entstehen, welche über Schnittstellen (\emph{Data Space Connectors}) technisch integriert werden, wodurch gemeinsame Ziele der Akteure realisiert werden können.
+Um große Datensilos zu verhindern, sind überlappende Data Ecosystems mit verbunden Data Spaces anzustreben (vgl. \autoref{fig:data-sharing-iois-di-ds}).
 
 % Data Ecosystem Parties
 Data Spaces erlauben flexible betriebliche Strukturen, welche einer bestimmten Menge an Akteuren Zugriff auf den sicheren, vertrauenswürdigen Data Space erlauben, welcher in größere \emph{Data Ecosystems} eingebettet werden kann.

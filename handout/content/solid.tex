@@ -2,32 +2,32 @@
 
 \section{Solid}
 
-Eine mögliche Implementierung des Data Space Konzepts basiert auf Solid (ehem. \emph{Social Linked Data}), welches das Ziel verfolgt, ein Fundament für offene, dezentralisierte Netzwerke für einen souveränen Datenaustausch zu schaffen.
-Solid definiert dazu Protokolle für die Verwaltung und den Austausch von Daten in einer dezentralisierten Umgebung, welche auf W3C"=Empfehlungen basiert~\cite{mecklerWebLinkedData2023}.
+Eine mögliche Implementierung des Data Space Konzepts basiert auf Solid, welches das Ziel verfolgt, ein Fundament für offene, dezentralisierte Netzwerke für einen souveränen Datenaustausch zu schaffen.
+Solid definiert dazu Protokolle für die Verwaltung und den Austausch von Daten in einer dezentralisierten Umgebung~\cite{mecklerWebLinkedData2023}.
 
 % Solid Data Spaces
-Solid Data Spaces verwenden die Web"=Architektur in Kombination mit Solid zur Bildung von Data Spaces.
-Dabei werden existierende Web"=Technologien erweitert, um eine Umgebung für sicheres Data Sharing zu erschaffen~\cite{mecklerWebLinkedData2023}.
-Dafür werden Anwendungen in drei Teile gegliedert: die (1) Anwendung als solches, (2) Daten und (3) Identität (vgl. \autoref{fig:solid-components}).
+Solid Data Spaces erweitern Web"=Technologien mit Solid zur Bildung von Data Spaces, um eine Umgebung für sicheres Data Sharing zu erschaffen~\cite{mecklerWebLinkedData2023}.
+Dafür werden Anwendungen in drei Teile gegliedert: die (1)~Anwendung als solches, (2)~Daten und (3)~Identität (vgl. \autoref{fig:solid-components}).
 
-% Komponenten
-Die Identitätskomponente verifiziert die Identität eines Akteurs zur Authentifizierung zum Datenzugriff.
-Die Daten und zugehörigen Zugriffsregeln werden dezentral in einem oder mehreren Datenspeichern gespeichert.
-Eine Anwendung verwendet (3), um den korrekten Datenspeicher zu identifizieren und sich für den Datenzugriff zu authentifizieren.
-Nach erfolgreicher Authentifizierung, kann eine Anwendung die erforderlichen Daten aus den Pods lesen und schreiben.
-Solid definiert dabei die Protokolle zur Verwaltung von Daten und Identitäten sowie die Zugriffskontrolle.
-Durch die Trennung, Standardisierung und somit Austauschbarkeit der einzelnen Komponenten ist eine Schritt"=für"=Schritt"=Einführung möglich, wodurch die Einstiegsbarriere gering gehalten und dadurch die Zugänglichkeit erhöht werden kann~\cite{mecklerWebLinkedData2023}.
-
-\begin{figure}[b]
+\begin{figure}[t]
     \includegraphics[width=0.7\textwidth]{./assets/solid_triangle.drawio.pdf}
     \caption{Solid-Komponenten: Anwendung, Identität und Daten}
     \label{fig:solid-components}
 \end{figure}
 
+% Komponenten
+Die Identitätskomponente verifiziert die Identität eines Akteurs zur Authentifizierung zum Datenzugriff.
+Die Daten und zugehörigen Zugriffsregeln werden dezentral in einem oder mehreren Datenspeichern gespeichert.
+Eine Anwendung verwendet (3), um den korrekten Datenspeicher zu identifizieren und sich für den Datenzugriff zu authentifizieren.
+Nach erfolgreicher Authentifizierung kann eine Anwendung die erforderlichen Daten aus (2) lesen und schreiben.
+Solid definiert dabei die Protokolle zur Verwaltung von Daten und Identitäten sowie die Zugriffskontrolle.
+Durch die Trennung, Standardisierung und somit Austauschbarkeit der einzelnen Komponenten, ist eine Schritt"=für"=Schritt"=Einführung möglich.
+Dadurch kann die Einstiegsbarriere gering gehalten und folglich die Zugänglichkeit erhöht werden~\cite{mecklerWebLinkedData2023}.
+
 
 \subsection{Datenmanagement und Datenzugriff}
 
-Daten werden, entsprechend des Data Space Konzepts, dezentral in sog. \emph{Personal Online Data Stores} (Pods) und nicht zentral bei den Anwendungen gespeichert~\cite{mecklerWebLinkedData2023}.
+Daten werden, entsprechend des Data Space Konzepts, dezentral in sog. \emph{Personal Online Data Stores} (Pods) und nicht zentral bei den Anwendungen gespeichert~\cite{mecklerWebLinkedData2023} (vgl. \autoref{fig:central-vs-decentral}).
 Durch die Verwendung von Standards kann somit eine Interoperabilität auf der Daten"= statt der Anwendungsebene erzeugt werden, wodurch ein einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration möglich ist.
 
 % Datenstruktur
@@ -40,17 +40,18 @@ Andere Datenstrukturen können mittels Mapping zu RDF oder als Binärdateien mit
 Die Daten werden in Form von \emph{LDP"=Containern} gespeichert.
 Diese sind an sich selbst ein RDF"=Graph, wodurch eine Hierarchie durch Verschachtelung möglich ist (vgl. Verzeichnisstruktur).
 Auf jeder Ebene der Hierarchie kann eine Zugriffskontrolle über \emph{Access Control List} (ACL) für Ressourcen definiert werden.
-Es können unterschiedliche Rechte pro Akteur sowie pro Ressource bzw. Container eingerichtet werden, wodurch ein feingranularer Datenschutz gewährleistet werden kann~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
+Folglich können unterschiedliche Rechte pro Akteur sowie pro Ressource bzw. Container eingerichtet werden, wodurch ein feingranularer Datenschutz umgesetzt werden kann~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
 
 % Lesen und Schreiben
 Solid"=Anwendungen lesen und schreiben Daten direkt von und in den Pods.
-Da Pods interoperabel mit den Anwendungen sein müssen, um eine Austauschbarkeit zu gewährleisten, muss ein wohldefiniertes und möglichst einfach implementierbares Protokoll zum Datenzugriff eingesetzt werden.
-Solid verwendet dafür RESTful"=Methoden basierend auf der \emph{Linked Data Platform} (LDP).
-Diese definiert bestimmte HTTP"=Operationen auf Web"=Ressourcen, wodurch alle CRUD"=Operationen abgedeckt werden.
+Da Pods interoperabel mit den Anwendungen sein müssen, um eine Austauschbarkeit zu gewährleisten, muss ein wohldefiniertes und möglichst einfach implementierbares Protokoll eingesetzt werden.
+Solid erweitert dafür häufig bereits vorhandene RESTful"=Methoden.
+% Solid verwendet dafür RESTful"=Methoden basierend auf der \emph{Linked Data Platform} (LDP).
+% Es definiert bestimmte HTTP"=Operationen auf Web"=Ressourcen, wodurch alle CRUD"=Operationen abgedeckt werden.
 Um eine Ressource global eindeutig zu identifizieren, ist jeder Ressource ein \emph{Uniform Resource Identifier} (URI) zugewiesen~\cite{mecklerWebLinkedData2023,sambraSolidPlatformDecentralized2016}.
 
 % SPARQL
-Mit den LDP"=Methoden sind jedoch nur einfache Anfragen möglich.
+Mit den RESTful"=Methoden sind jedoch nur einfache Anfragen möglich.
 Komplizierte Datenabfragen können optional mittels SPARQL unterstützt werden.
 Um den Entwicklungsaufwand zu verringern, werden diese Operationen an den Server delegiert.
 Dabei sind \emph{Local Queries}, welche nur innerhalb \emph{eines} Pods operieren, und \emph{Link Following Queries}, welche über mehrere Pods hinweg mittels Verfolgung von Links operieren, möglich.
@@ -59,13 +60,13 @@ Die tatsächliche Verteilung muss dabei nicht bekannt sein~\cite{sambraSolidPlat
 
 \subsection{Identität und Authentifizierung}
 
-Um Vertrauen, Datensouveränität und Datenschutz zu gewährleisten ist eine Authentifizierung von Akteuren notwendig.
+Um Vertrauen, Datensouveränität und Datenschutz zu gewährleisten, ist eine Authentifizierung von Akteuren notwendig.
 Zum Erreichen einer Dezentralisierung ist ein globaler \emph{Identity Space} notwendig, welcher zur RDF"=basierten Daten in den Pods sowie der gewünschten Erweiterbarkeit passt und relevante Links zu den Datenspeichern liefert.
 \emph{WebID} erfüllt die genannten Kriterien und wird daher in Solid verwendet~\cite{sambraSolidPlatformDecentralized2016}, kann später jedoch durch \enquote{bessere} Protokolle ersetzt werden.
 
 Akteure besitzen eine WebID"=URI, welche ein \emph{WebID Profile Document} referenziert.
 Dieses enthält wiederum Referenzen auf den Pod und die Anwendungsdaten sowie weitere Dokumente, um das Profil zu beschreiben~\cite{solidcommunitygroupSolidWebIDProfile2024}.
-Das Profile Document wird bei einem \emph{Identity Provider} (meist Pod Provider) gespeichert, wodurch die Akteure die Kontrolle über die eigene Identität behalten~\cite{sambraSolidPlatformDecentralized2016}.
+Das Profile Document wird bei einem \emph{Identity Provider} (meist Pod Provider) gespeichert, wodurch die Akteure die Kontrolle über ihre eigene Identität behalten~\cite{sambraSolidPlatformDecentralized2016}.
 
 Eine Besonderheit bei Solid ist, dass sich Akteure gegenüber Anwendungen nicht authentifizieren müssen.
 Eine Authentifizierung wird ggf. nur durchgeführt, um die WebID des Akteurs zu erlangen.
@@ -86,7 +87,7 @@ Weitere Metadaten sind notwendig, um \emph{Constraints} für das Data Sharing zu
 
 Zum einen kann über Metadaten ein \emph{Data Processing Purpose} $P$ angegeben werden, welche die minimal möglichen und notwendigen Rechte beschreibt.
 Die Weitergabe von Daten soll nur unter mindestens genauso starken Restriktionen erlaubt sein.
-Dafür führt \cite{bothSolidBasedB2BData2025} eine Purpose"=Klassen ein, welche weitergegeben werden muss~\cite{bothSolidBasedB2BData2025}.
+Dafür führt \cite{bothSolidBasedB2BData2025} eine \emph{Purpose}"=Klasse ein, welche weitergegeben werden muss~\cite{bothSolidBasedB2BData2025}.
 
 Andererseits soll die ursprüngliche Quelle bei der Weitergabe von Daten versteckt werden.
 Um eine spätere Nachvollziehbarkeit zu garantieren, soll jedoch angegeben werden, dass die Zugriffsrechte und weitergegebenen Daten auf einer Freigabe durch eine Drittpartei basiert.
@@ -94,4 +95,4 @@ Dies wird durch eine \emph{Facade}"=Klasse umgesetzt, welche den ursprünglichen
 
 Diese Erweiterung zeigt die Möglichkeiten und Notwendigkeit der Erweiterbarkeit von Solid.
 Sie dient als weiterer Schritt in Richtung Wertschöpfungsketten unter der Berücksichtigung des Schutzes von Daten und Geschäftsgeheimnissen.
-Allerdings ist weitere Forschung notwendig, um die verwendete Purpose"=Ontologie zu validieren, um vollständig automatisierbare Prozesse zu etablieren~\cite{bothSolidBasedB2BData2025}.
+Allerdings ist weitere Forschung notwendig, um die verwendeten Methoden zu validieren, um vollständig automatisierbare Prozesse zu etablieren~\cite{bothSolidBasedB2BData2025}.
