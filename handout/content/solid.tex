@@ -8,7 +8,7 @@ Solid definiert dazu Protokolle für die Verwaltung und den Austausch von Daten 
 % Solid Data Spaces
 Solid Data Spaces erweitern existierende Web"=Technologien um Solid, damit Data Spaces gebildet werden können.
 So wird eine Umgebung für sicheres Data Sharing geschaffen~\cite{mecklerWebLinkedData2023}.
-Dafür werden Anwendungen in drei Komponenten gegliedert: die (1)~Anwendung als solches, (2)~Daten und (3)~Identität (vgl. \autoref{fig:solid-components}).
+Dafür werden Anwendungen in drei Komponenten gegliedert: die (1)~Anwendung als solche, (2)~Daten und (3)~Identität (vgl. \autoref{fig:solid-components}).
 
 \begin{figure}[t]
     \includegraphics[width=0.7\textwidth]{./assets/solid_triangle.drawio.pdf}
@@ -17,7 +17,7 @@ Dafür werden Anwendungen in drei Komponenten gegliedert: die (1)~Anwendung als 
 \end{figure}
 
 % Komponenten
-Die Identitätskomponente (2) authentifiziert einen Akteur für den Datenzugriff (2).
+Die Identitätskomponente (3) authentifiziert einen Akteur für den Datenzugriff (2).
 Die Daten und zugehörigen Zugriffsregeln werden dezentral in einem oder mehreren Datenspeichern (2) gespeichert.
 Eine Anwendung verwendet (3), um den korrekten Datenspeicher zu identifizieren und sich für den Datenzugriff zu authentifizieren.
 Nach erfolgreicher Authentifizierung kann eine Anwendung die erforderlichen Daten aus (2) lesen und schreiben.
@@ -28,7 +28,7 @@ Dadurch kann die Einstiegsbarriere niedrig gehalten und folglich die Zugänglich
 
 \subsection{Datenmanagement und Datenzugriff}
 
-Daten werden, entsprechend des Data Space Konzepts, dezentral in sog. \emph{Personal Online Data Stores} (Pods) und nicht zentral bei den Anwendungen gespeichert~\cite{mecklerWebLinkedData2023} (vgl. \autoref{fig:central-vs-decentral}).
+Daten werden, entsprechend des Data"=Space"=Konzepts, dezentral in sog. \emph{Personal Online Data Stores} (Pods) und nicht zentral bei den Anwendungen gespeichert~\cite{mecklerWebLinkedData2023} (vgl. \autoref{fig:central-vs-decentral}).
 Durch die Verwendung von Standards kann somit eine Interoperabilität auf der Daten"= statt der Anwendungsebene erzeugt werden, wodurch ein einfacher Wechsel von Anwendungen ohne aufwendige Datenmigration möglich ist.
 
 % Datenstruktur
@@ -95,6 +95,6 @@ Andererseits soll die ursprüngliche Quelle bei der Weitergabe von Daten verstec
 Um eine spätere Nachvollziehbarkeit zu garantieren, soll jedoch angegeben werden, dass die Zugriffsrechte und weitergegebenen Daten auf einer Freigabe durch eine Drittpartei basieren.
 Dies wird durch eine \emph{Facade}"=Klasse umgesetzt, welche den ursprünglichen Data Provider versteckt~\cite{bothSolidBasedB2BData2025}. Ein Beispiel ist in \autoref{fig:example-data-donation} dargestellt.
 
-Diese Erweiterung zeigt die Möglichkeiten und Notwendigkeit der Erweiterbarkeit von Solid.
+Diese Erweiterung zeigt die Möglichkeit und Notwendigkeit der Erweiterbarkeit von Solid.
 Sie dient als weiterer Schritt in Richtung Wertschöpfungsketten unter der Berücksichtigung des Schutzes von Daten und Geschäftsgeheimnissen.
 Allerdings ist weitere Forschung notwendig, um die verwendeten Methoden zu validieren, um vollständig automatisierbare Prozesse in der Breite zu etablieren~\cite{bothSolidBasedB2BData2025}.
